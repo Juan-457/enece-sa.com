@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7b4f3a" />
+      <stop offset="1" stop-color="#d9b08c" />
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="800" fill="url(#g)" />
+  <text x="50%" y="50%" text-anchor="middle" fill="#ffffff" font-size="64" font-family="Poppins, Arial" opacity="0.35">Hero 3</text>
+</svg>
