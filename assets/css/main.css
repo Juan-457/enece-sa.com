@@ -127,6 +127,7 @@ img {
   overflow: hidden;
   background: #111;
   color: #fff;
+  min-height: clamp(420px, 75vh, 960px);
 }
 
 .hero-slide {
@@ -141,9 +142,38 @@ img {
   position: relative;
 }
 
+[data-puzzle].is-active {
+  opacity: 1;
+}
+
+.js .hero-slide {
+  position: absolute;
+  inset: 0;
+  min-height: 100%;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  pointer-events: none;
+}
+
+.js .hero-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
 [data-puzzle] {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
+}
+
+[data-puzzle]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
 }
 
 [data-puzzle].puzzle-ready {
@@ -187,7 +217,7 @@ img {
 
 .hero-content {
   position: relative;
-  z-index: 3;
+  z-index: 2;
   font-size: clamp(2rem, 5vw, 4.5rem);
   font-weight: 800;
   letter-spacing: 1px;
@@ -199,7 +229,7 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.18);
   border-radius: 16px;
   z-index: -1;
 }
@@ -211,7 +241,7 @@ img {
   transform: translateX(-50%);
   display: flex;
   gap: 8px;
-  z-index: 3;
+  z-index: 2;
 }
 
 .hero-dot {
@@ -235,7 +265,7 @@ img {
   height: 40px;
   border-radius: 50%;
   border: none;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(0, 0, 0, 0.35);
   color: #fff;
   font-size: 26px;
   font-weight: 600;
@@ -243,12 +273,12 @@ img {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 3;
+  z-index: 2;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .hero-arrow:hover {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   transform: translateY(-50%) scale(1.05);
 }
 
