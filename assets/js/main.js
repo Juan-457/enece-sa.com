@@ -9,6 +9,8 @@ const mobileBreakpoint = window.matchMedia("(max-width: 768px)");
 let index = 0;
 const puzzleElements = Array.from(document.querySelectorAll("[data-puzzle]"));
 
+const resolvePuzzleImage = (image) => new URL(image, document.baseURI).href;
+
 const getPuzzleImage = (element) => {
   const dataImage = element.dataset.image;
   if (dataImage) {
@@ -31,20 +33,40 @@ const getPuzzleGrid = (element) => {
 const setPuzzleImage = (element) => {
   const image = getPuzzleImage(element);
   if (!image) {
-    return;
+    return null;
   }
-  element.style.setProperty("--puzzle-image", `url("${image}")`);
+  const resolvedImage = resolvePuzzleImage(image);
+  element.style.setProperty("--puzzle-image", `url("${resolvedImage}")`);
   if (!element.style.backgroundImage) {
-    element.style.backgroundImage = "var(--puzzle-image)";
+    element.style.backgroundImage = `url("${resolvedImage}")`;
   }
+  return resolvedImage;
 };
 
-const createPuzzlePieces = (element) => {
+const loadPuzzleImage = (element) =>
+  new Promise((resolve) => {
+    const image = setPuzzleImage(element);
+    if (!image) {
+      resolve(false);
+      return;
+    }
+    const testImage = new Image();
+    testImage.onload = () => resolve(true);
+    testImage.onerror = () => resolve(false);
+    testImage.src = image;
+  });
+};
+
+const createPuzzlePieces = async (element) => {
   if (element.dataset.puzzleBuilt === "true" || prefersReducedMotion.matches) {
-    return;
+    return false;
   }
 
-  setPuzzleImage(element);
+  const loaded = await loadPuzzleImage(element);
+  if (!loaded) {
+    return false;
+  }
+
   element.classList.add("puzzle-ready");
 
   const overlay = document.createElement("div");
@@ -80,13 +102,17 @@ const createPuzzlePieces = (element) => {
   }
 
   element.dataset.puzzleBuilt = "true";
+  return true;
 };
 
-const revealPuzzle = (element) => {
+const revealPuzzle = async (element) => {
   if (prefersReducedMotion.matches) {
     return;
   }
-  createPuzzlePieces(element);
+  const built = await createPuzzlePieces(element);
+  if (!built) {
+    return;
+  }
   requestAnimationFrame(() => element.classList.add("puzzle-revealed"));
 };
 
