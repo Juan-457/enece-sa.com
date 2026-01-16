@@ -141,11 +141,50 @@ img {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.55);
+  z-index: 2;
+}
+
+.hero-puzzle {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-piece {
+  position: absolute;
+  background-image: var(--hero-image);
+  background-size: calc(var(--puzzle-cols) * 100%) calc(var(--puzzle-rows) * 100%);
+  opacity: 0;
+  transform: scale(0.6) rotate(var(--piece-rotate));
+  filter: blur(1px);
+}
+
+.hero-slide.is-animating .hero-piece {
+  animation: puzzle-assemble 0.9s ease forwards;
+  animation-delay: var(--piece-delay);
+}
+
+@keyframes puzzle-assemble {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) rotate(var(--piece-rotate));
+    filter: blur(2px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1) rotate(0deg);
+  }
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   font-size: clamp(2rem, 5vw, 4.5rem);
   font-weight: 800;
   letter-spacing: 1px;
