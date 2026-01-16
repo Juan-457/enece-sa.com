@@ -1,4 +1,5 @@
 /* How to use: add class="reveal" to any element and optional data-delay="150" (ms) for staggered reveals. */
+document.documentElement.classList.add("js");
 const slides = Array.from(document.querySelectorAll(".hero-slide"));
 const dots = Array.from(document.querySelectorAll(".hero-dot"));
 const prevButton = document.querySelector(".hero-arrow-prev");
@@ -99,6 +100,11 @@ const setupPuzzle = () => {
     return;
   }
 
+  if (typeof IntersectionObserver === "undefined") {
+    puzzleElements.forEach((element) => setPuzzleImage(element));
+    return;
+  }
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -155,7 +161,7 @@ const setupReveal = () => {
     element.style.transitionDelay = `${delay}ms`;
   });
 
-  if (prefersReducedMotion.matches) {
+  if (prefersReducedMotion.matches || typeof IntersectionObserver === "undefined") {
     revealElements.forEach((element) => element.classList.add("is-visible"));
     return;
   }
@@ -196,7 +202,9 @@ const hero = document.querySelector(".hero");
 let parallaxFrame;
 const updateParallax = () => {
   if (!hero || prefersReducedMotion.matches || mobileBreakpoint.matches) {
-    hero?.style.setProperty("--parallax-offset", "0px");
+    if (hero) {
+      hero.style.setProperty("--parallax-offset", "0px");
+    }
     return;
   }
 
@@ -218,5 +226,14 @@ setupSmoothScroll();
 updateParallax();
 window.addEventListener("scroll", onScroll, { passive: true });
 window.addEventListener("resize", updateParallax);
-prefersReducedMotion.addEventListener("change", updateParallax);
-mobileBreakpoint.addEventListener("change", updateParallax);
+if (prefersReducedMotion.addEventListener) {
+  prefersReducedMotion.addEventListener("change", updateParallax);
+} else if (prefersReducedMotion.addListener) {
+  prefersReducedMotion.addListener(updateParallax);
+}
+
+if (mobileBreakpoint.addEventListener) {
+  mobileBreakpoint.addEventListener("change", updateParallax);
+} else if (mobileBreakpoint.addListener) {
+  mobileBreakpoint.addListener(updateParallax);
+}
