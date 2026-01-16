@@ -122,17 +122,23 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
+/* ------------------------------------------------------------
+   HERO + PUZZLE (full working block)
+------------------------------------------------------------ */
+
 .hero {
   position: relative;
   overflow: hidden;
   background: #111;
   color: #fff;
   min-height: clamp(420px, 75vh, 960px);
+  height: clamp(420px, 75vh, 960px);
 }
 
+/* Base slide styling (works with or without JS) */
 .hero-slide {
-  min-height: 600px;
   width: 100%;
+  height: 100%;
   display: grid;
   place-items: center;
   text-align: center;
@@ -142,14 +148,10 @@ img {
   position: relative;
 }
 
-[data-puzzle].is-active {
-  opacity: 1;
-}
-
+/* If JS is enabled, turn slides into a real carousel stack */
 .js .hero-slide {
   position: absolute;
   inset: 0;
-  min-height: 100%;
   opacity: 0;
   transform: scale(1.02);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -160,22 +162,29 @@ img {
   opacity: 1;
   transform: scale(1);
   pointer-events: auto;
+  z-index: 1;
 }
 
+/* Puzzle container */
 [data-puzzle] {
   position: relative;
   overflow: hidden;
   isolation: isolate;
+  background-image: var(--puzzle-image);
+  background-size: cover;
+  background-position: center calc(50% + var(--parallax-offset, 0px));
 }
 
+/* Subtle global darken (keep it light so images don't look black) */
 [data-puzzle]::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.18);
   z-index: 0;
 }
 
+/* Once image resolved */
 [data-puzzle].puzzle-ready {
   background-image: var(--puzzle-image);
 }
@@ -241,7 +250,7 @@ img {
   transform: translateX(-50%);
   display: flex;
   gap: 8px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .hero-dot {
@@ -273,7 +282,7 @@ img {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 2;
+  z-index: 3;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
@@ -289,6 +298,10 @@ img {
 .hero-arrow-next {
   right: 16px;
 }
+
+/* ------------------------------------------------------------
+   SECTIONS / CONTENT
+------------------------------------------------------------ */
 
 .section {
   padding: 72px 0;
@@ -334,11 +347,21 @@ img {
   gap: 16px;
   align-items: center;
   margin-bottom: 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .highlight-box h3 {
   margin: 0;
   font-size: 1.5rem;
+}
+
+.highlight-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.18);
+}
+
+.highlight-box:active {
+  transform: translateY(-2px);
 }
 
 .products-grid {
@@ -471,19 +494,6 @@ button:active {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
-.highlight-box {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.highlight-box:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.18);
-}
-
-.highlight-box:active {
-  transform: translateY(-2px);
-}
-
 footer {
   padding: 24px 0;
   text-align: center;
@@ -523,4 +533,14 @@ footer {
   .products-grid {
     margin-top: 0;
   }
+
+  .hero {
+    min-height: 420px;
+    height: 420px;
+  }
+
+  .hero-slide {
+    padding: 100px 18px;
+  }
 }
+
