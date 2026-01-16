@@ -14,7 +14,7 @@ body {
   margin: 0;
   font-family: "Poppins", "Barlow", sans-serif;
   color: var(--text);
-  background: #ffffff;
+  background: #e6e1d8;
 }
 
 .reveal {
@@ -47,6 +47,14 @@ img {
 .container {
   width: min(1200px, 92%);
   margin: 0 auto;
+}
+
+.site-shell {
+  width: min(1320px, 96%);
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+  position: relative;
 }
 
 .site-header {
@@ -131,8 +139,8 @@ img {
   overflow: hidden;
   background: #111;
   color: #fff;
-  min-height: clamp(420px, 75vh, 960px);
-  height: clamp(420px, 75vh, 960px);
+  min-height: clamp(380px, 60vh, 700px);
+  height: clamp(380px, 60vh, 700px);
 }
 
 /* Base slide styling (works with or without JS) */
@@ -144,7 +152,7 @@ img {
   text-align: center;
   background-size: cover;
   background-position: center calc(50% + var(--parallax-offset, 0px));
-  padding: 120px 20px;
+  padding: 100px 20px;
   position: relative;
 }
 
@@ -203,11 +211,14 @@ img {
 .puzzle-piece {
   position: absolute;
   background-image: var(--puzzle-image);
-  background-size: calc(var(--puzzle-cols) * 100%) calc(var(--puzzle-rows) * 100%);
+  background-size: calc(var(--puzzle-cols) * 100% + 2px) calc(var(--puzzle-rows) * 100% + 2px);
+  width: calc(100% / var(--puzzle-cols) + 1px) !important;
+  height: calc(100% / var(--puzzle-rows) + 1px) !important;
   opacity: 0;
 
   /* ✅ seam fix (GPU + no subpixel seams) */
   backface-visibility: hidden;
+  transform-origin: center;
   transform: translate3d(var(--piece-x), var(--piece-y), 0) scale(0.85) rotate(var(--piece-rotate));
   filter: blur(2px);
   will-change: transform, opacity;
@@ -226,7 +237,7 @@ img {
   }
   100% {
     opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+    transform: translate3d(0, 0, 0) scale(1.02) rotate(0deg);
     filter: blur(0);
   }
 }
@@ -542,8 +553,8 @@ footer {
   }
 
   .hero {
-    min-height: 420px;
-    height: 420px;
+    min-height: 360px;
+    height: 360px;
   }
 
   .hero-slide {
