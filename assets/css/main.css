@@ -141,21 +141,13 @@ img {
   position: relative;
 }
 
-.hero-slide::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 2;
-}
-
 [data-puzzle] {
   position: relative;
   overflow: hidden;
 }
 
 [data-puzzle].puzzle-ready {
-  background-image: none !important;
+  background-image: var(--puzzle-image);
 }
 
 .puzzle-overlay {
@@ -200,6 +192,16 @@ img {
   font-weight: 800;
   letter-spacing: 1px;
   text-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  padding: 20px 32px;
+}
+
+.hero-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 16px;
+  z-index: -1;
 }
 
 .hero-controls {
