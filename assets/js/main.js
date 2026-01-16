@@ -160,25 +160,34 @@ function showSlide(nextIndex) {
   index = nextIndex;
 }
 
-dots.forEach((dot, i) => {
-  dot.addEventListener("click", () => showSlide(i));
-});
+if (slides.length) {
+  showSlide(0);
+}
 
-prevButton.addEventListener("click", () => {
-  const prev = (index - 1 + slides.length) % slides.length;
-  showSlide(prev);
-});
+if (slides.length > 1) {
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => showSlide(i));
+  });
 
-nextButton.addEventListener("click", () => {
-  const next = (index + 1) % slides.length;
-  showSlide(next);
-});
+  if (prevButton) {
+    prevButton.addEventListener("click", () => {
+      const prev = (index - 1 + slides.length) % slides.length;
+      showSlide(prev);
+    });
+  }
 
-showSlide(0);
-setInterval(() => {
-  const next = (index + 1) % slides.length;
-  showSlide(next);
-}, 6000);
+  if (nextButton) {
+    nextButton.addEventListener("click", () => {
+      const next = (index + 1) % slides.length;
+      showSlide(next);
+    });
+  }
+
+  setInterval(() => {
+    const next = (index + 1) % slides.length;
+    showSlide(next);
+  }, 6000);
+}
 
 const revealElements = Array.from(document.querySelectorAll(".reveal"));
 const setupReveal = () => {
