@@ -17,6 +17,18 @@ body {
   background: #ffffff;
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -119,7 +131,7 @@ img {
   place-items: center;
   text-align: center;
   background-size: cover;
-  background-position: center;
+  background-position: center calc(50% + var(--parallax-offset, 0px));
   padding: 120px 20px;
   position: relative;
 }
@@ -260,6 +272,16 @@ img {
   padding: 20px;
   text-align: center;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+}
+
+.product-card:active {
+  transform: translateY(-2px);
 }
 
 .product-card img {
@@ -338,6 +360,30 @@ button {
   border-radius: 999px;
   cursor: pointer;
   font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.highlight-box {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.highlight-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.18);
+}
+
+.highlight-box:active {
+  transform: translateY(-2px);
 }
 
 footer {
@@ -345,6 +391,25 @@ footer {
   text-align: center;
   background: #f0f0f0;
   color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .banner-track {
+    animation: none;
+    padding-left: 0;
+  }
+
+  button,
+  .product-card,
+  .highlight-box {
+    transition: none;
+  }
 }
 
 @media (max-width: 768px) {
