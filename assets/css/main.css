@@ -184,7 +184,7 @@ img {
   overflow: hidden;
   isolation: isolate;
   --puzzle-overlap: 1px;
-  background-image: var(--puzzle-image);
+  background-image: none;
   background-size: cover;
   background-position: center calc(50% + var(--parallax-offset, 0px));
 
@@ -202,8 +202,8 @@ img {
   z-index: 0;
 }
 
-/* Once image resolved */
-[data-puzzle].puzzle-ready {
+/* Show base image only after puzzle is fully revealed */
+[data-puzzle].puzzle-revealed {
   background-image: var(--puzzle-image);
 }
 
@@ -234,7 +234,7 @@ img {
   will-change: transform, opacity;
 }
 
-.puzzle-revealed .puzzle-piece {
+.puzzle-animating .puzzle-piece {
   animation: puzzle-reveal 0.9s ease forwards;
   animation-delay: var(--piece-delay);
 }
