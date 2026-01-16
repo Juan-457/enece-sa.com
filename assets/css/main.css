@@ -173,6 +173,10 @@ img {
   background-image: var(--puzzle-image);
   background-size: cover;
   background-position: center calc(50% + var(--parallax-offset, 0px));
+
+  /* ✅ anti-seam helpers */
+  background-repeat: no-repeat;
+  transform: translateZ(0);
 }
 
 /* Subtle global darken (keep it light so images don't look black) */
@@ -201,7 +205,10 @@ img {
   background-image: var(--puzzle-image);
   background-size: calc(var(--puzzle-cols) * 100%) calc(var(--puzzle-rows) * 100%);
   opacity: 0;
-  transform: translate(var(--piece-x), var(--piece-y)) scale(0.85) rotate(var(--piece-rotate));
+
+  /* ✅ seam fix (GPU + no subpixel seams) */
+  backface-visibility: hidden;
+  transform: translate3d(var(--piece-x), var(--piece-y), 0) scale(0.85) rotate(var(--piece-rotate));
   filter: blur(2px);
   will-change: transform, opacity;
 }
@@ -214,12 +221,12 @@ img {
 @keyframes puzzle-reveal {
   0% {
     opacity: 0;
-    transform: translate(var(--piece-x), var(--piece-y)) scale(0.85) rotate(var(--piece-rotate));
+    transform: translate3d(var(--piece-x), var(--piece-y), 0) scale(0.85) rotate(var(--piece-rotate));
     filter: blur(2px);
   }
   100% {
     opacity: 1;
-    transform: translate(0, 0) scale(1) rotate(0deg);
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
     filter: blur(0);
   }
 }
@@ -543,4 +550,3 @@ footer {
     padding: 100px 18px;
   }
 }
-
