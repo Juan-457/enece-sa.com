@@ -239,15 +239,37 @@ img {
 }
 
 .banner {
-  background: url("../section-bg3-2.jpg") center/cover no-repeat;
+  background: var(--green);
   color: #fff;
-  text-align: center;
-  padding: 80px 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px 0;
+  overflow: hidden;
 }
 
-.banner h2 {
-  margin: 0;
-  font-size: clamp(2rem, 4vw, 3rem);
+.banner-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 48px;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: clamp(1rem, 2.4vw, 1.6rem);
+  animation: banner-scroll 18s linear infinite;
+  padding-left: 100%;
+}
+
+.banner-track span {
+  flex: 0 0 auto;
+}
+
+@keyframes banner-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .map-embed {
