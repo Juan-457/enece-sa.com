@@ -12,6 +12,7 @@ const mobileBreakpoint = window.matchMedia("(max-width: 768px)");
 let index = 0;
 
 const puzzleElements = Array.from(document.querySelectorAll("[data-puzzle]"));
+const puzzleTimers = new WeakMap();
 
 const resolvePuzzleImage = (image) => new URL(image, document.baseURI).href;
 
@@ -116,9 +117,17 @@ const createPuzzlePieces = async (element) => {
   return true;
 };
 
-const revealPuzzle = async (element) => {
+const resetPuzzleState = (element) => {
+  const existingTimer = puzzleTimers.get(element);
+  if (existingTimer) window.clearTimeout(existingTimer);
+  puzzleTimers.delete(element);
+  element.classList.remove("puzzle-start", "puzzle-revealed", "puzzle-animating", "puzzle-done");
+};
+
+const startPuzzle = async (element) => {
   if (prefersReducedMotion.matches) {
-    element.classList.add("puzzle-revealed");
+    setPuzzleImage(element);
+    element.classList.add("puzzle-done");
     return;
   }
 
@@ -127,15 +136,20 @@ const revealPuzzle = async (element) => {
   const built = await createPuzzlePieces(element);
   if (!built) return;
 
-  requestAnimationFrame(() => element.classList.add("puzzle-animating"));
+  element.classList.add("puzzle-start");
+  requestAnimationFrame(() => {
+    element.classList.add("puzzle-revealed");
+    element.classList.add("puzzle-animating");
+  });
 
   const maxDelay = Number(element.dataset.puzzleMaxDelay || 0);
   const animationDuration = 0.9;
   const totalDelayMs = (maxDelay + animationDuration) * 1000;
 
-  window.setTimeout(() => {
-    element.classList.add("puzzle-revealed");
+  const timer = window.setTimeout(() => {
+    element.classList.add("puzzle-done");
   }, totalDelayMs);
+  puzzleTimers.set(element, timer);
 };
 
 const setupPuzzle = () => {
@@ -145,7 +159,7 @@ const setupPuzzle = () => {
   if (prefersReducedMotion.matches) {
     puzzleElements.forEach((el) => {
       setPuzzleImage(el);
-      el.classList.add("puzzle-revealed");
+      el.classList.add("puzzle-done");
     });
     return;
   }
@@ -154,7 +168,7 @@ const setupPuzzle = () => {
   if (typeof IntersectionObserver === "undefined") {
     puzzleElements.forEach((el) => {
       setPuzzleImage(el);
-      el.classList.add("puzzle-revealed");
+      el.classList.add("puzzle-done");
     });
     return;
   }
@@ -163,7 +177,8 @@ const setupPuzzle = () => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          revealPuzzle(entry.target);
+          resetPuzzleState(entry.target);
+          startPuzzle(entry.target);
           observer.unobserve(entry.target);
         }
       });
@@ -177,7 +192,8 @@ const setupPuzzle = () => {
     // Si está en el hero, el reveal se maneja por is-active
     if (el.closest(".hero")) {
       if (el.classList.contains("is-active")) {
-        revealPuzzle(el);
+        resetPuzzleState(el);
+        startPuzzle(el);
       }
       return;
     }
@@ -188,11 +204,15 @@ const setupPuzzle = () => {
 
 function showSlide(nextIndex) {
   slides.forEach((slide, i) => {
-    slide.classList.toggle("is-active", i === nextIndex);
-    slide.setAttribute("aria-hidden", i === nextIndex ? "false" : "true");
+    const isActive = i === nextIndex;
+    slide.classList.toggle("is-active", isActive);
+    slide.setAttribute("aria-hidden", isActive ? "false" : "true");
 
-    if (i === nextIndex && slide.hasAttribute("data-puzzle")) {
-      revealPuzzle(slide);
+    if (slide.hasAttribute("data-puzzle")) {
+      resetPuzzleState(slide);
+      if (isActive) {
+        startPuzzle(slide);
+      }
     }
   });
 

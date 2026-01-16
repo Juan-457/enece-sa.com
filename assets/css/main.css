@@ -141,11 +141,13 @@ img {
   overflow: hidden;
   background: #111;
   color: #fff;
-  min-height: clamp(520px, 80vh, 960px);
-  height: clamp(520px, 80vh, 960px);
+  min-height: 680px;
+  height: 680px;
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
+  --hero-zoom: 1.28;
+  --hero-zoom-shift: -3%;
 }
 
 /* Base slide styling (works with or without JS) */
@@ -198,6 +200,8 @@ img {
   background-image: var(--puzzle-image);
   background-size: cover;
   background-position: center calc(50% + var(--parallax-offset, 0px));
+  transform: translate3d(0, var(--hero-zoom-shift, 0%), 0) scale(var(--hero-zoom, 1));
+  transform-origin: center;
   opacity: 0;
   transition: opacity 500ms ease;
   z-index: 0;
@@ -213,13 +217,17 @@ img {
 }
 
 /* Show base image only after puzzle is fully revealed */
-[data-puzzle].puzzle-revealed::before {
+[data-puzzle].puzzle-done::before {
   opacity: 1;
-  transition-delay: 900ms;
+  transition-delay: 150ms;
 }
 
 html:not(.js) [data-puzzle]::before {
   opacity: 1;
+}
+
+.puzzle-start {
+  background-image: none;
 }
 
 .puzzle-overlay {
@@ -227,7 +235,9 @@ html:not(.js) [data-puzzle]::before {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  transform: translateZ(0);
+  transform: translate3d(0, var(--hero-zoom-shift, 0%), 0) scale(var(--hero-zoom, 1));
+  transform-origin: center;
+  transition: opacity 400ms ease;
 }
 
 .puzzle-piece {
@@ -249,9 +259,13 @@ html:not(.js) [data-puzzle]::before {
   will-change: transform, opacity;
 }
 
-.puzzle-animating .puzzle-piece {
+.puzzle-revealed .puzzle-piece {
   animation: puzzle-reveal 0.9s ease forwards;
   animation-delay: var(--piece-delay);
+}
+
+[data-puzzle].puzzle-done .puzzle-overlay {
+  opacity: 0;
 }
 
 @keyframes puzzle-reveal {
