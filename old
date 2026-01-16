@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	
+	<title></title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="https://enece-sa.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Comments Feed" href="https://enece-sa.com/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://enece-sa.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fenece-sa.com%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://enece-sa.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fenece-sa.com%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+
+<link rel='stylesheet' id='extraicon-css' href='https://enece-sa.com/wp-content/plugins/wprt-addons//assets/agrikoleicons.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='extraicon2-css' href='https://enece-sa.com/wp-content/plugins/wprt-addons//assets/pe-icon-7-stroke.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='extraicon3-css' href='https://enece-sa.com/wp-content/plugins/wprt-addons//assets/eleganticons.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='menu-icons-extra-css' href='https://enece-sa.com/wp-content/plugins/menu-icons/css/extra.min.css?ver=0.13.18' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://enece-sa.com/wp-includes/css/dist/block-library/style.min.css?ver=6.9' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://enece-sa.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css' href='https://enece-sa.com/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.4.11' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+/*# sourceURL=rs-plugin-settings-inline-css */
+</style>
+<link rel='stylesheet' id='animate-css' href='https://enece-sa.com/wp-content/themes/agrikole/assets/css/animate.css?ver=3.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='animsition-css' href='https://enece-sa.com/wp-content/themes/agrikole/assets/css/animsition.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-css' href='https://enece-sa.com/wp-content/themes/agrikole/assets/css/slick.css?ver=1.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='eleganticons-css' href='https://enece-sa.com/wp-content/themes/agrikole/assets/css/eleganticons.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='pe-icon-7-stroke-css' href='https://enece-sa.com/wp-content/themes/agrikole/assets/css/pe-icon-7-stroke.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome-css' href='https://enece-sa.com/wp-content/themes/agrikole/assets/css/fontawesome.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='coreicon-css' href='https://enece-sa.com/wp-content/themes/agrikole/assets/css/coreicon.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='agrikole-theme-style-css' href='https://enece-sa.com/wp-content/themes/agrikole/style.css?ver=1.0.0' type='text/css' media='all' />
+<style id='agrikole-theme-style-inline-css' type='text/css'>
+/*TYPOGRAPHY*/body{font-family:"Barlow";}h1,h2,h3,h4,h5,h6{font-family:"Amatic SC";}/*ACCENT COLOR*/.text-accent-color,.link-dark:hover,.link-gray:hover,.sticky-post,#site-logo .site-logo-text:hover,.header-style-3 #site-header .nav-top-cart-wrapper .nav-cart-trigger:hover,.header-style-3 #site-header .header-search-trigger:hover,.header-style-3 .header-info > .content:before,.header-style-5 #site-header .nav-top-cart-wrapper .nav-cart-trigger:hover,.header-style-5 #site-header .header-search-trigger:hover,.hentry .post-tags .inner:before,#featured-title #breadcrumbs a:hover,.hentry .page-links span,.hentry .page-links a span,.hentry .post-tags .inner:before,.hentry .post-tags a:hover,.hentry .post-author .author-socials .socials a,.related-news .related-title,.related-news .post-item .post-categories a:hover,.related-news .post-item .text-wrap h3 a:hover,.related-news .related-post .slick-next:hover:before,.related-news .related-post .slick-prev:hover:before,.comment-edit-link,.unapproved,.logged-in-as a,#sidebar .widget.widget_calendar caption,.widget.widget_nav_menu .menu > li.current-menu-item > a,.widget.widget_nav_menu .menu > li.current-menu-item,#sidebar .widget.widget_calendar tbody #today,#sidebar .widget.widget_calendar tbody #today a,#sidebar .widget_information ul li.accent-icon i,#footer-widgets .widget_mc4wp_form_widget .mc4wp-form .submit-wrap button:before,#footer-widgets .widget.widget_recent_posts .post-author,#footer-widgets .widget.widget_recent_posts .post-author a,#bottom .bottom-bar-copyright a:hover,.agrikole-step-box .number-box .number,.agrikole-links.link-style-1.accent,.agrikole-links.link-style-2.accent,.agrikole-links.link-style-3.accent,.agrikole-arrow.hover-accent:hover,.agrikole-button.outline.outline-accent,.agrikole-button.outline.outline-accent .icon,.agrikole-counter .icon.accent,.agrikole-counter .prefix.accent,.agrikole-counter .suffix.accent,.agrikole-counter .number.accent,.agrikole-divider.has-icon .icon-wrap > span.accent,.agrikole-single-heading .heading.accent,.agrikole-headings .heading.accent,.agrikole-icon.accent > .icon,.agrikole-image-box .item .title a:hover,.agrikole-news .meta .author a:hover,.agrikole-news .meta .comment a:hover ,.agrikole-progress .perc.accent,.agrikole-list .icon.accent,.woocommerce-page .woocommerce-MyAccount-content .woocommerce-info .button,.products li .product-info .button,.products li .product-info .added_to_cart,.products li .product-cat:hover,.products li h2:hover,.woo-single-post-class .woocommerce-grouped-product-list-item__label a:hover,.woocommerce-page .shop_table.cart .product-name a:hover,.product_list_widget .product-title:hover,.widget_recent_reviews .product_list_widget a:hover,.widget_product_categories ul li a:hover,.widget.widget_product_search .woocommerce-product-search .search-submit:hover:before,.widget_shopping_cart_content ul li a:hover,a{color:#e2e2e2;}blockquote:before,button, input[type="button"], input[type="reset"], input[type="submit"],bg-accent,#main-nav > ul > li > a > span:before,#main-nav .sub-menu li a:before,.header-style-3 #main-nav > ul > li.current-menu-item > a > span,.header-style-3 #main-nav > ul > li.current-menu-parent > a > span,.header-style-5 #main-nav > ul > li.current-menu-item > a > span,.header-style-5 #main-nav > ul > li.current-menu-parent > a > span,.hentry .post-media .post-date-custom,.post-media .slick-prev:hover,.post-media .slick-next:hover,.post-media .slick-dots li.slick-active button,.hentry .post-link a > span:before,.comment-reply a,#cancel-comment-reply-link,#footer-widgets .widget .widget-title > span:after ,#sidebar .widget.widget_search .search-form,.widget.widget_search .search-form .search-submit,.widget_mc4wp_form_widget .mc4wp-form .submit-wrap button,#sidebar .widget.widget_tag_cloud .tagcloud a:hover,.widget_product_tag_cloud .tagcloud a:hover,.no-results-content .search-form .search-submit:before,.agrikole-accordions .accordion-item.active .accordion-heading > .inner:before,.agrikole-step-box .number-box:hover .number,.agrikole-links > span:before,.agrikole-links.link-style-1.accent > span:before,.agrikole-links.link-style-1.accent > span:after,.agrikole-links.link-style-1.dark > span:after,.agrikole-links.link-style-2.accent > span:before,.agrikole-links.link-style-3.accent > span:after,.agrikole-links.link-style-3.dark > span:after,.agrikole-button.accent,.agrikole-button.outline.outline-accent:hover,.agrikole-content-box > .inner.accent,.agrikole-content-box > .inner.dark-accent,.agrikole-content-box > .inner.light-accent,.agrikole-single-heading .line.accent,.agrikole-headings .sep.accent,.agrikole-headings .heading > span,.agrikole-icon-box:hover .icon-number,.agrikole-icon.accent-bg .icon,.agrikole-image-box .item .thumb .hover-image .arrow,.agrikole-image-box.style-2 .url-wrap .arrow,.agrikole-images-grid .zoom-popup:after,.agrikole-news .image-wrap .post-date-custom,.project-box .project-text .button a,.project-box .project-text .arrow a,.agrikole-progress .progress-animate.accent,.agrikole-images-carousel.has-borders:after,.agrikole-images-carousel.has-borders:before,.agrikole-images-carousel.has-arrows.arrow-bottom .owl-nav,.agrikole-team .socials li a:hover,.agrikole-video-icon.accent a,.woocommerce-page .wc-proceed-to-checkout .button,.woocommerce-page .return-to-shop a,#payment #place_order,.widget_price_filter .price_slider_amount .button:hover,.widget_shopping_cart_content .buttons a.checkout{background-color:#e2e2e2;}.underline-solid:after, .underline-dotted:after, .underline-dashed:after{border-bottom-color:#e2e2e2;}.widget.widget_links ul li a:after{border-bottom-color:#e2e2e2;}.widget_mc4wp_form_widget .mc4wp-form .email-wrap input:focus{border-color:#e2e2e2;}#sidebar .widget.widget_tag_cloud .tagcloud a:hover{border-color:#e2e2e2;}.widget_product_tag_cloud .tagcloud a:hover{border-color:#e2e2e2;}.no-results-content .search-form .search-field:focus{border-color:#e2e2e2;}.agrikole-step-box .number-box .number{border-color:#e2e2e2;}.agrikole-button.outline.outline-accent{border-color:#e2e2e2;}.agrikole-button.outline.outline-accent:hover{border-color:#e2e2e2;}.divider-icon-before.accent{border-color:#e2e2e2;}.divider-icon-after.accent{border-color:#e2e2e2;}.agrikole-divider.has-icon .divider-double.accent{border-color:#e2e2e2;}.widget_price_filter .ui-slider .ui-slider-handle{border-color:#e2e2e2;}.agrikole-progress .progress-animate.accent.gradient{background: rgba(226,226,226,1);background: -moz-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(226,226,226,0.3) 100%);background: -webkit-linear-gradient( left, rgba(226,226,226,1) 0%, rgba(226,226,226,0.3) 100% );background: linear-gradient(to right, rgba(226,226,226,1) 0%, rgba(226,226,226,0.3) 100%) !important;}/*CUSTOMIZER STYLING*/.animsition-loading{border-top-color:#8224e3;}.animsition-loading:before{border-top-color:#8224e3;}.header-style-1 #site-header:after{opacity:1;}.header-style-2 #site-header:after{opacity:1;}.header-style-3 #site-header:after{opacity:1;}.header-style-4 #site-header:after{opacity:0.0001;}.header-style-5 #site-header:after{opacity:0.0001;}#site-header #main-nav > ul > li > a{height:60px;line-height:60px;}.header-style-5 #main-nav > ul > li > a:hover{color:#ac76e2;}#featured-title .main-title{color:#ffffff;}#featured-title #breadcrumbs{color:#ffffff;}#featured-title #breadcrumbs a{color:#ffffff;}#footer{background-image:url(http://199.168.190.18/~enecesac/wp-content/uploads/2024/06/footer-bg.png);}
+/*# sourceURL=agrikole-theme-style-inline-css */
+</style>
+<link rel='stylesheet' id='agrikole-google-font-barlow-css' href='//fonts.googleapis.com/css?family=Barlow%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900&#038;subset=latin%2Cvietnamese&#038;ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='agrikole-google-font-amatic-sc-css' href='//fonts.googleapis.com/css?family=Amatic+SC%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900&#038;subset=latin%2Cvietnamese&#038;ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css' href='https://enece-sa.com/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='agrikole-owlcarousel-css' href='https://enece-sa.com/wp-content/plugins/wprt-addons/assets/owl.carousel.css?ver=2.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='agrikole-cubeportfolio-css' href='https://enece-sa.com/wp-content/plugins/wprt-addons/assets/cubeportfolio.min.css?ver=3.4.0' type='text/css' media='all' />
+<link rel='stylesheet' id='agrikole-magnificpopup-css' href='https://enece-sa.com/wp-content/plugins/wprt-addons/assets/magnific.popup.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='agrikole-vegas-css' href='https://enece-sa.com/wp-content/plugins/wprt-addons/assets/vegas.css?ver=2.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='agrikole-ytplayer-css' href='https://enece-sa.com/wp-content/plugins/wprt-addons/assets/ytplayer.css?ver=3.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='flickity-css' href='https://enece-sa.com/wp-content/plugins/wprt-addons/assets/flickity.css?ver=2.2.1' type='text/css' media='all' />
+<script type="text/javascript" src="https://enece-sa.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.4.8" id="tp-tools-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.4.11" id="revmin-js"></script>
+<link rel="https://api.w.org/" href="https://enece-sa.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://enece-sa.com/wp-json/wp/v2/pages/14510" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://enece-sa.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9" />
+<link rel="canonical" href="https://enece-sa.com/" />
+<link rel='shortlink' href='https://enece-sa.com/' />
+<link rel="shortcut icon" href="https://enece-sa.com/wp-content/uploads/2024/06/ENECE-APLICACIONES-rgb-72dpi-08.jpeg" type="image/x-icon"><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<meta name="generator" content="Powered by Slider Revolution 6.4.11 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<script type="text/javascript">function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {				 
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;	
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;	
+				try {								
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);		
+					if(e.layout==="fullscreen" || e.l==="fullscreen") 						
+						newh = Math.max(e.mh,window.RSIH);					
+					else{					
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];					
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,						
+							sl;					
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;					
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];									
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}															
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);					
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}				
+					if(window.rs_init_css===undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));					
+					document.getElementById(e.c).height = newh+"px";
+					window.rs_init_css.innerHTML += "#"+e.c+"_wrapper { height: "+newh+"px }";				
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}					   
+			//});
+		  };</script>
+		<style type="text/css" id="wp-custom-css">
+			:target:before {
+content:"";
+display:block;
+height:90px; /* fixed header height*/
+margin:-90px 0 0; /* negative fixed header height */
+}		</style>
+		<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1582358419137{background-color: #f5f0e9 !important;}.vc_custom_1719593417485{background-image: url(http://ninzio.com/agrikole/wp-content/uploads/2020/02/section-bg3.jpg?id=13353) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1719159470376{background-color: #f5f0e9 !important;}.vc_custom_1719598250473{background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><link rel='stylesheet' id='agrikole-google-font-poppins-css' href='//fonts.googleapis.com/css?family=Poppins%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900&#038;subset=latin%2Cvietnamese&#038;ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='prettyphoto-css' href='https://enece-sa.com/wp-content/plugins/js_composer/assets/lib/prettyphoto/css/prettyPhoto.min.css?ver=6.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='vc_pageable_owl-carousel-css-css' href='https://enece-sa.com/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/assets/owl.min.css?ver=6.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='vc_animate-css-css' href='https://enece-sa.com/wp-content/plugins/js_composer/assets/lib/bower/animate-css/animate.min.css?ver=6.2.0' type='text/css' media='all' />
+</head>
+
+<body class=" header-fixed no-sidebar site-layout-full-width header-style-5 header-btn-1 is-page no-padding-content wpb-js-composer js-comp-ver-6.2.0 vc_responsive">
+
+<div class="mobi-overlay"><span class="close"></span></div>
+<div id="wrapper" style="">
+		
+    <div id="page" class="clearfix ">
+    	<div id="site-header-wrap">
+				<ul class="mobi-nav-extra">
+		
+		
+			</ul>
+
+
+
+	<header id="site-header" style="">
+        <div class="site-header-inner agrikole-container">
+        	<div class="wrap-inner">
+	        	
+	<div id="site-logo">
+		<div id="site-logo-inner" style="max-width:173px;">
+							<a class="main-logo" href="https://enece-sa.com/" title="" rel="home" ><img src="https://enece-sa.com/wp-content/uploads/2024/06/logovioleta.png" alt="" /></a>
+					</div>
+	</div><!-- #site-logo -->
+	        	<div class="nav-wrap">
+					
+		<div class="mobile-button"><span></span></div>
+
+		<nav id="main-nav" class="main-nav">
+			<ul id="menu-primary-menu" class="menu"><li id="menu-item-15143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-14510 current_page_item menu-item-15143"><a href="https://enece-sa.com/" aria-current="page"><span>Enece</span></a></li>
+<li id="menu-item-15145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15145"><a href="https://enece-sa.com/enece-spanish-m-empresa/"><span>Empresa</span></a></li>
+<li id="menu-item-15146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15146"><a href="https://enece-sa.com/enece-spanish-m-productos/"><span>Productos</span></a></li>
+<li id="menu-item-15147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15147"><a href="https://enece-sa.com/enece-spanish-m-ubicacion/"><span>Ubicación</span></a></li>
+<li id="menu-item-15144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15144"><a href="https://enece-sa.com/enece-spanish-m-contacto/"><span>Contacto</span></a></li>
+<li id="menu-item-14924" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14924"><a href="https://enece-sa.com/enece-portuguese/"><span><img src="https://enece-sa.com/wp-content/uploads/2024/06/Flag_of_Brazil.svg" class="_mi _svg" aria-hidden="true" alt="" width="720" height="504"/><span class="visuallyhidden">Português</span></span></a></li>
+<li id="menu-item-14925" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14925"><a href="https://enece-sa.com/enece-ingles/"><span><img src="https://enece-sa.com/wp-content/uploads/2024/06/Flag_of_United_States.svg" class="_mi _svg" aria-hidden="true" alt="" width="1235" height="650"/><span class="visuallyhidden">English</span></span></a></li>
+</ul>		</nav>
+			        </div>
+		        	<div class="header-socials">
+		<div class="header-socials-inner">
+	    <a href="https://www.instagram.com/enece.agro/" title="Instagram"><span class="fa fa-instagram" aria-hidden="true"></span><span class="screen-reader-text">Instagram Profile</span></a>		</div>
+	</div><!-- /.header-socials -->
+			    </div>
+        </div><!-- /.site-header-inner -->
+	</header><!-- /#site-header -->
+
+
+
+
+
+
+
+
+		</div><!-- /#site-header-wrap -->
+
+		
+        <!-- Main Content -->
+        <div id="main-content" class="site-main clearfix" style="">    <div id="content-wrap" class="agrikole-container">
+        <div id="site-content" class="site-content clearfix">
+        	<div id="inner-content" class="inner-content-wrap">
+							<article class="page-content post-14510 page type-page status-publish hentry">
+					<div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+			<!-- START Slider Español REVOLUTION SLIDER 6.4.11 --><p class="rs-p-wp-fix"></p>
+			<rs-module-wrap id="rev_slider_16_1_wrapper" data-source="gallery" style="background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
+				<rs-module id="rev_slider_16_1" style="" data-version="6.4.11">
+					<rs-slides>
+						<rs-slide data-key="rs-41" data-title="Slide" data-thumb="//enece-sa.com/wp-content/uploads/2024/12/ENECE-01-155-copia-50x100.jpg" data-anim="f:random;" data-in="o:0;r:ran(-45|45);sx:0;sy:0;row:5;col:5;" data-out="a:false;">
+							<img fetchpriority="high" decoding="async" src="//enece-sa.com/wp-content/uploads/2024/12/ENECE-01-155-copia.jpg" title="ENECE-01-155-copia" width="1671" height="1360" class="rev-slidebg tp-rs-img" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-16-slide-41-layer-0" 
+								data-type="text"
+								data-rsp_ch="on"
+								data-xy="x:c;y:m;yo:-80px,-70px,-112px,-87px;"
+								data-text="w:normal;s:90,120,104,64;l:90,110,99,71;fw:800;a:center;"
+								data-vbility="t,t,t,f"
+								data-frame_0="y:50,43,32,19;"
+								data-frame_1="st:300;sp:1000;sR:300;"
+								data-frame_999="o:0;st:w;sp:800;sR:7700;"
+								style="z-index:8;font-family:Barlow;"
+							>PRODUCTORES<br>DE PAPA 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-16-slide-41-layer-1" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="xo:50px,43px,32px,20px;yo:50px,43px,32px,30px;"
+								data-text="w:normal;s:20,17,12,7;l:0,21,15,9;"
+								data-dim="w:300px,262px,199px,122px;h:180px,157px,119px,57px;"
+								data-vbility="f,f,f,t"
+								data-frame_999="o:0;st:w;"
+								style="z-index:9;"
+							><img decoding="async" src="//enece-sa.com/wp-content/uploads/2024/06/logovioleta.png" class="tp-rs-img" width="671" height="316" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-16-slide-41-layer-11" 
+								data-type="shape"
+								data-rsp_ch="on"
+								data-xy="xo:-589px,-515px,-391px,-112px;yo:-26px,-22px,-16px,-2px;"
+								data-text="w:normal;s:20,17,12,7;l:0,21,15,9;"
+								data-dim="w:2398px,2098px,1593px,982px;h:980px,857px,651px,407px;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:10;background-color:rgba(0,0,0,0.4);"
+							> 
+							</rs-layer><!--
+-->						</rs-slide>
+						<rs-slide data-key="rs-42" data-title="Slide" data-thumb="//enece-sa.com/wp-content/uploads/2024/12/ENECE-01-160-2-scaled-1-50x100.jpg" data-anim="f:random;" data-in="o:0;r:ran(-45|45);sx:0;sy:0;row:5;col:5;" data-out="a:false;">
+							<img decoding="async" src="//enece-sa.com/wp-content/uploads/2024/12/ENECE-01-160-2-scaled-1.jpg" title="ENECE-01-160-2-scaled" width="2560" height="1707" class="rev-slidebg tp-rs-img" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-16-slide-42-layer-0" 
+								data-type="text"
+								data-rsp_ch="on"
+								data-xy="x:c;y:m;yo:-80px,-70px,-112px,-87px;"
+								data-text="w:normal;s:90,120,104,64;l:90,110,99,71;fw:800;a:center;"
+								data-vbility="t,t,t,f"
+								data-frame_0="y:50,43,32,19;"
+								data-frame_1="st:300;sp:1000;sR:300;"
+								data-frame_999="o:0;st:w;sp:800;sR:7700;"
+								style="z-index:11;font-family:Barlow;"
+							>CULTIVO Y<br>COMERCIALIZACIÓN 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-16-slide-42-layer-12" 
+								data-type="shape"
+								data-rsp_ch="on"
+								data-xy="x:c;y:m;"
+								data-text="w:normal;s:20,17,12,7;l:0,21,15,9;"
+								data-dim="w:2809px,2458px,1867px,1151px;h:959px,839px,637px,400px;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:8;background-color:rgba(0,0,0,0.4);"
+							> 
+							</rs-layer><!--
+-->						</rs-slide>
+						<rs-slide data-key="rs-43" data-title="Slide" data-thumb="//enece-sa.com/wp-content/uploads/2024/12/ENECE-01-188-50x100.jpg" data-anim="f:random;" data-in="o:0;r:ran(-45|45);sx:0;sy:0;row:5;col:5;" data-out="a:false;">
+							<img loading="lazy" decoding="async" src="//enece-sa.com/wp-content/uploads/2024/12/ENECE-01-188.jpg" title="ENECE-01-188" width="2040" height="1360" class="rev-slidebg tp-rs-img" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-16-slide-43-layer-0" 
+								data-type="text"
+								data-rsp_ch="on"
+								data-xy="x:c;y:m;yo:-80px,-70px,-112px,-87px;"
+								data-text="w:normal;s:90,120,104,64;l:90,110,99,71;fw:800;a:center;"
+								data-vbility="t,t,t,f"
+								data-frame_0="y:50,43,32,19;"
+								data-frame_1="st:300;sp:1000;sR:300;"
+								data-frame_999="o:0;st:w;sp:800;sR:7700;"
+								style="z-index:11;font-family:Barlow;"
+							>UN CASCO <br>CON HISTORIA 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-16-slide-43-layer-12" 
+								data-type="shape"
+								data-rsp_ch="on"
+								data-xy="x:c;y:m;"
+								data-text="w:normal;s:20,17,12,7;l:0,21,15,9;"
+								data-dim="w:2809px,2458px,1867px,1151px;h:959px,839px,637px,400px;"
+								data-frame_999="o:0;st:w;"
+								style="z-index:8;background-color:rgba(0,0,0,0.4);"
+							> 
+							</rs-layer><!--
+-->						</rs-slide>
+					</rs-slides>
+				</rs-module>
+				<script type="text/javascript">
+					setREVStartSize({c: 'rev_slider_16_1',rl:[1240,1024,778,480],el:[952,768,960,400],gw:[1170,1024,778,480],gh:[952,768,960,400],type:'standard',justify:'',layout:'fullwidth',mh:"0"});
+					var	revapi16,
+						tpj;
+					function revinit_revslider161() {
+					jQuery(function() {
+						tpj = jQuery;
+						revapi16 = tpj("#rev_slider_16_1");
+						if(revapi16==undefined || revapi16.revolution == undefined){
+							revslider_showDoubleJqueryError("rev_slider_16_1");
+						}else{
+							revapi16.revolution({
+								DPR:"dpr",
+								sliderLayout:"fullwidth",
+								visibilityLevels:"1240,1024,778,480",
+								gridwidth:"1170,1024,778,480",
+								gridheight:"952,768,960,400",
+								spinner:"spinner0",
+								perspective:600,
+								perspectiveType:"local",
+								editorheight:"952,768,960,400",
+								responsiveLevels:"1240,1024,778,480",
+								progressBar:{disableProgressBar:true},
+								navigation: {
+									wheelCallDelay:1000,
+									onHoverStop:false,
+									arrows: {
+										enable:true,
+										style:"custom",
+										hide_onmobile:true,
+										hide_under:"1024px",
+										left: {
+											h_offset:30
+										},
+										right: {
+											h_offset:30
+										}
+									}
+								},
+								fallbacks: {
+									allowHTML5AutoPlayOnAndroid:true
+								},
+							});
+						}
+						
+					});
+					} // End of RevInitScript
+				var once_revslider161 = false;
+				if (document.readyState === "loading") {document.addEventListener('readystatechange',function() { if((document.readyState === "interactive" || document.readyState === "complete") && !once_revslider161 ) { once_revslider161 = true; revinit_revslider161();}});} else {once_revslider161 = true; revinit_revslider161();}
+				</script>
+				<script>
+					var htmlDivCss = unescape("%23rev_slider_16_1_wrapper%20.custom.tparrows%20%7B%0A%09cursor%3Apointer%3B%0A%09background%3A%23000%3B%0A%09background%3Argba%280%2C0%2C0%2C0.5%29%3B%0A%09width%3A40px%3B%0A%09height%3A40px%3B%0A%09position%3Aabsolute%3B%0A%09display%3Ablock%3B%0A%09z-index%3A1000%3B%0A%7D%0A%23rev_slider_16_1_wrapper%20.custom.tparrows.rs-touchhover%20%7B%0A%09background%3A%23000%3B%0A%7D%0A%23rev_slider_16_1_wrapper%20.custom.tparrows%3Abefore%20%7B%0A%09font-family%3A%20%27revicons%27%3B%0A%09font-size%3A15px%3B%0A%09color%3A%23fff%3B%0A%09display%3Ablock%3B%0A%09line-height%3A%2040px%3B%0A%09text-align%3A%20center%3B%0A%7D%0A%23rev_slider_16_1_wrapper%20.custom.tparrows.tp-leftarrow%3Abefore%20%7B%0A%09content%3A%20%27%5Ce824%27%3B%0A%7D%0A%23rev_slider_16_1_wrapper%20.custom.tparrows.tp-rightarrow%3Abefore%20%7B%0A%09content%3A%20%27%5Ce825%27%3B%0A%7D%0A%0A%0A");
+					var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+					if(htmlDiv) {
+						htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+					}else{
+						var htmlDiv = document.createElement('div');
+						htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+						document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+					}
+				</script>
+				<script>
+					var htmlDivCss = unescape("%0A%0A%0A");
+					var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+					if(htmlDiv) {
+						htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+					}else{
+						var htmlDiv = document.createElement('div');
+						htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+						document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+					}
+				</script>
+			</rs-module-wrap>
+			<!-- END REVOLUTION SLIDER -->
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="agrikole-spacer clearfix" data-desktop="80" data-mobi="40" data-smobi="40"></div><div class="agrikole-headings clearfix " data-font=30 data-mfont=14 style=""><div class="pre-heading clearfix" style="color:#7b4696;font-size:14px;letter-spacing:3px;">
+		BIENVENIDOS A ENECE
+	</div><h2 class="heading clearfix " style="line-height:50px;font-family:Poppins;font-size:30px;">
+		EXPERIENCIA EN CULTIVO Y<br />
+COMERCIALIZACIÓN DE PAPA
+	</h2><div class="sep clearfix" style="margin:5px 0 0;">
+				<img decoding="async" alt="image" src="https://enece-sa.com/wp-content/uploads/2024/06/separador200x46.png">
+			</div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="agrikole-spacer clearfix" data-desktop="80" data-mobi="40" data-smobi="40"></div>
+	<div class="wpb_text_column wpb_content_element " id="enece">
+		<div class="wpb_wrapper">
+			<p><span>Desde los comienzos nos dedicamos a la producción, industrialización y exportación de diversas variedades de papas. También producimos papa-semilla para autoabastecimiento y para proveer a terceros.</span></p>
+
+		</div>
+	</div>
+</div></div></div></div>
+	<div class="agrikole-spacer clearfix" data-desktop="60" data-mobi="60" data-smobi="60"></div></div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid overflow-visible vc_custom_1582358419137 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="agrikole-spacer clearfix" data-desktop="40" data-mobi="40" data-smobi="40"></div><div class="agrikole-content-box clearfix " data-padding="60px" data-mobipadding="60px" data-margin="-60px 0px 0px 0px" data-mobimargin="-60px 0px 0px 0px" >
+		<div class="inner ctb-272098815" style=""  data-background="#5b8c51" data-rounded="5px" data-border-style="solid" data-border-style-hover="solid">
+			<div class="agrikole-icon-box clearfix icon-left align-left  link-hover-accent simple" style="" ><div class="wrap-inner" style="position: relative;"><div class="agrikole-icon icon-451166700 icon-font accent custom"  data-background="">
+			<span class="icon" style="font-size:64px;width:64px;height:64px;border-style:solid;line-height:64px;"><i class="agri-sprout"></i></span>
+		</div> <div class="content-wrap"><h3 class="heading  white" style="padding-left:85px;color:#ffffff;font-size:30px;line-height:30px;font-family:Poppins;">
+			<span>Nuestra prioridad, cuidar nuestro medio ambiente</span>
+		</h3></div></div></div>
+		</div>
+	</div>
+	<div class="agrikole-spacer clearfix" data-desktop="120" data-mobi="120" data-smobi="120"></div><div class="agrikole-content-box clearfix " data-padding="60px" data-mobipadding="60px" data-margin="-60px 0px 0px 0px" data-mobimargin="-60px 0px 0px 0px" >
+		<div class="inner ctb-1613008687" style=""  data-background="#5b8c51" data-rounded="5px" data-border-style="solid" data-border-style-hover="solid">
+			<div class="agrikole-icon-box clearfix icon-left align-left  link-hover-accent simple" style="" ><div class="wrap-inner" style="position: relative;"><div class="agrikole-icon icon-433365223 icon-font accent custom"  data-background="">
+			<span class="icon" style="font-size:64px;width:64px;height:64px;border-style:solid;line-height:64px;"><i class="agri-tulip"></i></span>
+		</div> <div class="content-wrap"><h3 class="heading  white" style="padding-left:85px;color:#ffffff;font-size:30px;line-height:30px;font-family:Poppins;">
+			<span>Nuestros productos</span>
+		</h3></div></div></div>
+		</div>
+	</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="agrikole-simple-image reveal wow  lr " >
+				<figure style=""><img decoding="async" alt="image" src="https://enece-sa.com/wp-content/uploads/2024/06/DSC_5528.jpg" /> </figure>
+			</div></div></div></div></div>
+	<div class="wpb_text_column wpb_content_element " id="productos">
+		<div class="wpb_wrapper">
+			
+		</div>
+	</div>
+
+	<div class="agrikole-spacer clearfix" data-desktop="409" data-mobi="169" data-smobi="169"></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid half-on-991"><div class="wpb_column vc_column_container vc_col-sm-1/5"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="agrikole-content-box clearfix " data-padding="" data-mobipadding="" data-margin="-289px 0px 0px 0px" data-mobimargin="-89px 0px 0px 0px" >
+		<div class="inner ctb-1348805769" style=""  data-background="" data-border-style="solid" data-border-style-hover="solid">
+			<div class="agrikole-image-box clearfix style-1 text-center" style="" >
+        <div class="item">
+            <div class="inner">
+                <div class="thumb" style="border-radius:10px; overflow:hidden;width:150px;margin: 0 auto;"> <img loading="lazy" decoding="async" width="200" height="198" src="https://enece-sa.com/wp-content/uploads/2024/06/fondo-violeta-e1719164240985.jpg" class="attachment-full size-full" alt="" srcset="https://enece-sa.com/wp-content/uploads/2024/06/fondo-violeta-e1719164240985.jpg 200w, https://enece-sa.com/wp-content/uploads/2024/06/fondo-violeta-e1719164240985-150x150.jpg 150w, https://enece-sa.com/wp-content/uploads/2024/06/fondo-violeta-e1719164240985-140x140.jpg 140w, https://enece-sa.com/wp-content/uploads/2024/06/fondo-violeta-e1719164240985-100x100.jpg 100w" sizes="auto, (max-width: 200px) 100vw, 200px" /></div>
+                <div class="text-wrap " style=" padding:35px 30px 0px;">
+                    <h3 class="title" style="font-weight:800;font-size:25px;line-height:34px;margin-bottom:22px;font-family:Poppins;">
+        ATLANTIC
+    </h3> <div class="desc" style="margin-bottom:24px;"><div class="desc"><span>Variedad para la industria de chips. Tubérculo redondeado, piel casposa, ojos superficiales, carne blanca, buen calibre.</span></div>
+</div> 
+                </div>
+            </div>
+        </div>
+    </div>
+		</div>
+	</div>
+	<div class="agrikole-spacer clearfix" data-desktop="0" data-mobi="140" data-smobi="140"></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-1/5"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="agrikole-content-box clearfix " data-padding="" data-mobipadding="" data-margin="-289px 0px 0px 0px" data-mobimargin="-89px 0px 0px 0px" >
+		<div class="inner ctb-1046591682" style=""  data-background="" data-border-style="solid" data-border-style-hover="solid">
+			<div class="agrikole-image-box clearfix style-1 text-center" style="" >
+        <div class="item">
+            <div class="inner">
+                <div class="thumb" style="border-radius:10px; overflow:hidden;width:150px;margin: 0 auto;"> <img loading="lazy" decoding="async" width="200" height="198" src="https://enece-sa.com/wp-content/uploads/2024/06/fondo-verde-e1719164221620.jpg" class="attachment-full size-full" alt="" srcset="https://enece-sa.com/wp-content/uploads/2024/06/fondo-verde-e1719164221620.jpg 200w, https://enece-sa.com/wp-content/uploads/2024/06/fondo-verde-e1719164221620-150x150.jpg 150w, https://enece-sa.com/wp-content/uploads/2024/06/fondo-verde-e1719164221620-140x140.jpg 140w, https://enece-sa.com/wp-content/uploads/2024/06/fondo-verde-e1719164221620-100x100.jpg 100w" sizes="auto, (max-width: 200px) 100vw, 200px" /></div>
+                <div class="text-wrap " style=" padding:35px 30px 0px;">
+                    <h3 class="title" style="font-weight:800;font-size:25px;line-height:34px;margin-bottom:22px;font-family:Poppins;">
+        INNOVATOR
+    </h3> <div class="desc" style="margin-bottom:24px;"><div class="desc"><span>Los tubérculos son oblongos a alargados, piel blanca amarilla rugosa, carne color crema, ojos superficiales muy bien distribuidos, tamaño grande, alto rendimiento, maduración tardía.</span></div>
+</div> 
+                </div>
+            </div>
+        </div>
+    </div>
+		</div>
+	</div>
+	<div class="agrikole-spacer clearfix" data-desktop="0" data-mobi="140" data-smobi="140"></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-1/5"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="agrikole-content-box clearfix " data-padding="" data-mobipadding="" data-margin="-289px 0px 0px 0px" data-mobimargin="-89px 0px 0px 0px" >
+		<div class="inner ctb-145001813" style=""  data-background="" data-border-style="solid" data-border-style-hover="solid">
+			<div class="agrikole-image-box clearfix style-1 text-center" style="" >
+        <div class="item">
+            <div class="inner">
+                <div class="thumb" style="border-radius:10px; overflow:hidden;width:150px;margin: 0 auto;"> <img loading="lazy" decoding="async" width="200" height="198" src="https://enece-sa.com/wp-content/uploads/2024/06/fondo-rosita-e1719164259482.jpg" class="attachment-full size-full" alt="" srcset="https://enece-sa.com/wp-content/uploads/2024/06/fondo-rosita-e1719164259482.jpg 200w, https://enece-sa.com/wp-content/uploads/2024/06/fondo-rosita-e1719164259482-150x150.jpg 150w, https://enece-sa.com/wp-content/uploads/2024/06/fondo-rosita-e1719164259482-140x140.jpg 140w, https://enece-sa.com/wp-content/uploads/2024/06/fondo-rosita-e1719164259482-100x100.jpg 100w" sizes="auto, (max-width: 200px) 100vw, 200px" /></div>
+                <div class="text-wrap " style=" padding:35px 30px 0px;">
+                    <h3 class="title" style="font-weight:800;font-size:25px;line-height:34px;margin-bottom:22px;font-family:Poppins;">
+        TAURUS
+    </h3> <div class="desc" style="margin-bottom:24px;"><p><span>Los tuberculos son grandes, de forma redonda a oval redondeada, uniformes, piel amarilla, ojos bastante superficiales y resistente a la mancha negra no infecciosa.</span></p>
+</div> 
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="agrikole-spacer clearfix" data-desktop="0" data-mobi="140" data-smobi="140"></div>
+		</div>
+	</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-1/5"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="agrikole-content-box clearfix " data-padding="" data-mobipadding="" data-margin="-289px 0px 0px 0px" data-mobimargin="-89px 0px 0px 0px" >
+		<div class="inner ctb-1134163881" style=""  data-background="" data-border-style="solid" data-border-style-hover="solid">
+			<div class="agrikole-image-box clearfix style-1 text-center" style="" >
+        <div class="item">
+            <div class="inner">
+                <div class="thumb" style="border-radius:10px; overflow:hidden;width:150px;margin: 0 auto;"> <img loading="lazy" decoding="async" width="200" height="198" src="https://enece-sa.com/wp-content/uploads/2024/06/violeta-4-blanc-e1719164172457.jpg" class="attachment-full size-full" alt="" srcset="https://enece-sa.com/wp-content/uploads/2024/06/violeta-4-blanc-e1719164172457.jpg 200w, https://enece-sa.com/wp-content/uploads/2024/06/violeta-4-blanc-e1719164172457-150x150.jpg 150w, https://enece-sa.com/wp-content/uploads/2024/06/violeta-4-blanc-e1719164172457-140x140.jpg 140w, https://enece-sa.com/wp-content/uploads/2024/06/violeta-4-blanc-e1719164172457-100x100.jpg 100w" sizes="auto, (max-width: 200px) 100vw, 200px" /></div>
+                <div class="text-wrap " style=" padding:35px 30px 0px;">
+                    <h3 class="title" style="font-weight:800;font-size:25px;line-height:34px;margin-bottom:22px;font-family:Poppins;">
+        SPUNTA
+    </h3> <div class="desc" style="margin-bottom:24px;"><p><span>Los tubérculos son oval alargados, piel suave, carne amarilla, tamaño grande a muy grande, rendimiento muy alto y madurez semitemprana.</span></p>
+</div> 
+                </div>
+            </div>
+        </div>
+    </div>
+		</div>
+	</div>
+	<div class="agrikole-spacer clearfix" data-desktop="0" data-mobi="140" data-smobi="140"></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-1/5"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="agrikole-content-box clearfix " data-padding="" data-mobipadding="" data-margin="-289px 0px 0px 0px" data-mobimargin="-89px 0px 0px 0px" >
+		<div class="inner ctb-223116030" style=""  data-background="" data-border-style="solid" data-border-style-hover="solid">
+			<div class="agrikole-image-box clearfix style-1 text-center" style="" >
+        <div class="item">
+            <div class="inner">
+                <div class="thumb" style="border-radius:10px; overflow:hidden;width:150px;margin: 0 auto;"> <img loading="lazy" decoding="async" width="200" height="198" src="https://enece-sa.com/wp-content/uploads/2024/06/negro-y-blanco-e1719164197401.jpg" class="attachment-full size-full" alt="" srcset="https://enece-sa.com/wp-content/uploads/2024/06/negro-y-blanco-e1719164197401.jpg 200w, https://enece-sa.com/wp-content/uploads/2024/06/negro-y-blanco-e1719164197401-150x150.jpg 150w, https://enece-sa.com/wp-content/uploads/2024/06/negro-y-blanco-e1719164197401-140x140.jpg 140w, https://enece-sa.com/wp-content/uploads/2024/06/negro-y-blanco-e1719164197401-100x100.jpg 100w" sizes="auto, (max-width: 200px) 100vw, 200px" /></div>
+                <div class="text-wrap " style=" padding:35px 30px 0px;">
+                    <h3 class="title" style="font-weight:800;font-size:25px;line-height:34px;margin-bottom:22px;font-family:Poppins;">
+        SAGITTA
+    </h3> <div class="desc" style="margin-bottom:24px;"><div class="desc"><span>Los tuberculos son oval alargados, piel suave, carne amarilla, tamaño grande, rendimiento bueno, madurez tardía</span></div>
+</div> 
+                </div>
+            </div>
+        </div>
+    </div>
+		</div>
+	</div>
+	<div class="agrikole-spacer clearfix" data-desktop="0" data-mobi="140" data-smobi="140"></div></div></div></div></div></div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1719593417485 vc_row-has-fill vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="agrikole-spacer clearfix" data-desktop="20" data-mobi="10" data-smobi="0"></div><div class="agrikole-carousel-box arrow-style-1 arrow-center offsetcenter offset-v0 arrow50" data-auto="true" data-loop="true" data-gap="0" data-column="1" data-column2="1" data-column3="1">
+        <div class="owl-carousel owl-theme"><div class="agrikole-headings clearfix text-center" data-font=50 data-mfont=30 style=""><h2 class="heading clearfix " style="color:#ffffff;max-width:990px;margin-left: auto; margin-right: auto;line-height:50px;font-family:Poppins;font-size:50px;">
+		EXPLOTACIÓN AGRÍCOLA
+	</h2></div><div class="agrikole-headings clearfix text-center" data-font=50 data-mfont=30 style=""><h2 class="heading clearfix " style="color:#ffffff;max-width:990px;margin-left: auto; margin-right: auto;line-height:50px;font-family:Poppins;font-size:50px;">
+		MÁS DE 60 AÑOS DE EXPERIENCIA
+	</h2></div></div>
+	</div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div id="empresa" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-has-fill"><div class="vc_column-inner vc_custom_1719159470376"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			
+		</div>
+	</div>
+<div class="vc_row wpb_row vc_inner vc_row-fluid vc_row-o-equal-height vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="agrikole-spacer clearfix" data-desktop="80" data-mobi="40" data-smobi="40"></div><div class="agrikole-headings clearfix " data-font=30 data-mfont=14 style=""><h2 class="heading clearfix " style="line-height:50px;font-family:Poppins;font-size:30px;">
+		UNA MEJOR<br />
+AGRICULTURA
+	</h2><div class="sep clearfix" style="margin:5px 0 0;">
+				<img decoding="async" alt="image" src="https://enece-sa.com/wp-content/uploads/2024/06/separador200x46.png">
+			</div></div>
+	<div class="agrikole-spacer clearfix" data-desktop="45" data-mobi="40" data-smobi="40"></div><div class="agrikole-text clearfix " style="font-family:Poppins;font-weight:600;font-size:14px;line-height:22px;"><div style="max-width: 400;">
+<p class="font_8 wixui-rich-text__text"><span class="color_24 wixui-rich-text__text"><span class="wixui-rich-text__text">Nuestra historia comienza en el año 2015, a partir de la vocación y ganas de continuar prosperando en el rubro de Producción de una Hortaliza tan fundamental como lo es la papa.</span></span></p>
+<p class="font_8 wixui-rich-text__text"><span class="color_24 wixui-rich-text__text"><span class="wixui-rich-text__text">Somos la continuidad de una empresa familiar que cuenta </span></span><span class="color_24 wixui-rich-text__text"><span class="wixui-rich-text__text">con más de 60 años de experiencia en cultivo y comercialización en papas.</span></span></p>
+<p class="font_8 wixui-rich-text__text"><span class="color_24 wixui-rich-text__text"><span class="wixui-rich-text__text">Desde los comienzos nos dedicamos a la producción, industrialización y exportación de diversas variedades de papas. También producimos papa-semilla para autoabastecimiento y para proveer a terceros.</span></span></p>
+<p class="font_8 wixui-rich-text__text"><span class="color_24 wixui-rich-text__text"><span class="wixui-rich-text__text"><span class="wixGuard wixui-rich-text__text">​</span></span></span><span class="color_24 wixui-rich-text__text"><span class="wixui-rich-text__text">Por otro lado, poseemos varias Cámaras Frigoríficas de almacenamiento para </span></span><span class="color_24 wixui-rich-text__text"><span class="wixui-rich-text__text">cada uno de nuestros Clientes. Creemos que es un servicio fundamental que debemos </span></span><span class="color_24 wixui-rich-text__text"><span class="wixui-rich-text__text">ofrecerles  para poder mantener nuestros Productos en Excelente estado.</span></span></p>
+<p class="font_8 wixui-rich-text__text"><span class="color_24 wixui-rich-text__text"><span class="wixui-rich-text__text">ENECE S.A es una empresa de explotación agrícola especializada en el cultivo de papa,</span></span><span class="color_24 wixui-rich-text__text"><span class="wixui-rich-text__text">la cual se esfuerza para seguir creciendo, aprendiendo y superándose.</span></span></p>
+</div>
+</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="agrikole-spacer clearfix" data-desktop="200" data-mobi="40" data-smobi="40"></div>
+<div class="vc_grid-container-wrapper vc_clearfix">
+	<div class="vc_grid-container vc_clearfix wpb_content_element vc_media_grid" data-initial-loading-animation="fadeIn" data-vc-grid-settings="{&quot;page_id&quot;:14510,&quot;style&quot;:&quot;all&quot;,&quot;action&quot;:&quot;vc_get_vc_grid_data&quot;,&quot;shortcode_id&quot;:&quot;1739657954504-e60c2932-741b-5&quot;,&quot;tag&quot;:&quot;vc_media_grid&quot;}" data-vc-request="https://enece-sa.com/wp-admin/admin-ajax.php" data-vc-post-id="14510" data-vc-public-nonce="ccf07e4d87">
+		
+	</div>
+</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " id="ubi">
+		<div class="wpb_wrapper">
+			
+		</div>
+	</div>
+
+	<div class="agrikole-spacer clearfix" data-desktop="80" data-mobi="40" data-smobi="40"></div><div class="agrikole-headings clearfix " data-font=30 data-mfont=14 style=""><h2 class="heading clearfix " style="line-height:50px;font-family:Poppins;font-size:30px;">
+		UBICACIÓN
+	</h2><div class="sep clearfix" style="margin:5px 0 0;">
+				<img decoding="async" alt="image" src="https://enece-sa.com/wp-content/uploads/2024/06/separador200x46.png">
+			</div></div><div class="agrikole-text clearfix " style="font-family:Poppins;font-weight:600;font-size:14px;line-height:22px;"><p><span>Av San Martín, Acceso a Comandante Nicanor Otamendi.</span><br />
+<span>Prov. Buenos Aires. Argentina.</span></p>
+<p><span>Tel: +54-2291-480950</span><br />
+<span>Whatsapp: +542236937609</span><br />
+<span>E-mail: contacto@enece-sa.com</span></p>
+</div>
+	<div class="agrikole-spacer clearfix" data-desktop="60" data-mobi="60" data-smobi="60"></div><div class="agrikole-icon-box clearfix icon-left align-left  link-hover-accent simple" style="margin:0 0 24px;" ><div class="wrap-inner" style="position: relative;"> <div class="content-wrap"></div></div></div><div class="wpb_gmaps_widget wpb_content_element wpb_animate_when_almost_visible wpb_fadeIn fadeIn"><div class="wpb_wrapper"><div class="wpb_map_wraper"><iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d815.5725727663018!2d-57.84652779999999!3d-38.1018611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzjCsDA2JzA2LjciUyA1N8KwNTAnNDcuNSJX!5e1!3m2!1ses!2sar!4v1717076735467!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div></div>
+	<div class="agrikole-spacer clearfix" data-desktop="80" data-mobi="20" data-smobi="20"></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<a id="ubi"></a>
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-has-fill"><div class="vc_column-inner vc_custom_1719598250473"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " id="contacto">
+		<div class="wpb_wrapper">
+			
+		</div>
+	</div>
+<div class="agrikole-headings clearfix " data-font=30 data-mfont=14 style=""><h2 class="heading clearfix " style="line-height:50px;font-family:Poppins;font-size:30px;">
+		FORMULARIO DE CONTACTO
+	</h2><div class="sep clearfix" style="margin:5px 0 0;">
+				<img decoding="async" alt="image" src="https://enece-sa.com/wp-content/uploads/2024/06/separador200x46.png">
+			</div></div>
+	<div class="agrikole-spacer clearfix" data-desktop="60" data-mobi="60" data-smobi="60"></div><div class="agrikole-cf7  bg- btn-green">
+<div class="wpcf7 no-js" id="wpcf7-f4437-p14510-o1" lang="en-US" dir="ltr" data-wpcf7-id="4437">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/#wpcf7-f4437-p14510-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="4437" /><input type="hidden" name="_wpcf7_version" value="6.1.4" /><input type="hidden" name="_wpcf7_locale" value="en_US" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f4437-p14510-o1" /><input type="hidden" name="_wpcf7_container_post" value="14510" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</fieldset>
+<div class="input-wrap clearfix">
+	<div class="name-wrap">
+		<p><span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Nombre" value="" type="text" name="your-name" /></span>
+		</p>
+	</div>
+	<div class="email-wrap">
+		<p><span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Mail" value="" type="email" name="your-email" /></span>
+		</p>
+	</div>
+</div>
+<div class="input-wrap clearfix">
+	<div class="phone-wrap">
+		<p><span class="wpcf7-form-control-wrap" data-name="your-phone"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Teléfono" value="" type="text" name="your-phone" /></span>
+		</p>
+	</div>
+	<div class="subject-wrap">
+		<p><span class="wpcf7-form-control-wrap" data-name="your-subject"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Asunto" value="" type="text" name="your-subject" /></span>
+		</p>
+	</div>
+</div>
+<div class="message-wrap">
+	<p><span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Mensaje" name="your-message"></textarea></span>
+	</p>
+</div>
+<div class="submit-wrap">
+	<p><span><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Send Message" /></span>
+	</p>
+</div><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+</div></div></div></div></div>
+				</article>
+
+										</div>
+        </div><!-- /#site-content -->
+
+            </div><!-- /#content-wrap -->
+		</div><!-- /.main-content -->
+
+				
+		
+<div id="bottom" class="style-1" style="">
+    <div class="agrikole-container">
+        <div class="bottom-bar-inner-wrap">
+            <div class="bottom-bar-copyright clearfix">
+                                    <div id="copyright">
+                        Created -JwGroup - 2024                    </div>
+                
+                            </div><!-- /.bottom-bar-copyright -->
+        </div>
+    </div>
+</div><!-- /#bottom -->
+	</div><!-- /#page -->
+</div><!-- /#wrapper -->
+
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/agrikole/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/html" id="wpb-modifications"></script><link href="https://fonts.googleapis.com/css?family=Barlow:800%7CRoboto:400" rel="stylesheet" property="stylesheet" media="all" type="text/css" >
+
+		<script type="text/javascript">
+		if(typeof revslider_showDoubleJqueryError === "undefined") {
+			function revslider_showDoubleJqueryError(sliderID) {
+				var err = "<div class='rs_error_message_box'>";
+				err += "<div class='rs_error_message_oops'>Oops...</div>";
+				err += "<div class='rs_error_message_content'>";
+				err += "You have some jquery.js library include that comes after the Slider Revolution files js inclusion.<br>";
+				err += "To fix this, you can:<br>&nbsp;&nbsp;&nbsp; 1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on";
+				err += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jQuery.js inclusion and remove it";
+				err += "</div>";
+			err += "</div>";
+				var slider = document.getElementById(sliderID); slider.innerHTML = err; slider.style.display = "block";
+			}
+		}
+		</script>
+<script type="text/javascript" src="https://enece-sa.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.4" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-before">
+/* <![CDATA[ */
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/enece-sa.com\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    },
+    "cached": 1
+};
+//# sourceURL=contact-form-7-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.4" id="contact-form-7-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/themes/agrikole/assets/js/html5shiv.js?ver=3.7.3" id="html5shiv-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/themes/agrikole/assets/js/respond.js?ver=1.3.0" id="respond-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/themes/agrikole/assets/js/matchmedia.js?ver=1.0.0" id="matchmedia-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/themes/agrikole/assets/js/easing.js?ver=1.3.0" id="easing-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/themes/agrikole/assets/js/fitvids.js?ver=1.1.0" id="fitvids-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/themes/agrikole/assets/js/animsition.js?ver=4.0.1" id="animsition-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/themes/agrikole/assets/js/main.js?ver=1.0.0" id="agrikole-theme-script-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/wprt-addons/assets/imagesloaded.js?ver=4.1.3" id="agrikole-imagesloaded-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/wprt-addons/assets/equalize.min.js?ver=1.0.0" id="agrikole-equalize-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/wprt-addons/assets/magnific.popup.min.js?ver=1.0.0" id="agrikole-magnificpopup-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/wprt-addons/assets/appear.js?ver=0.3.6" id="agrikole-appear-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/wprt-addons/assets/flickityside.js?ver=0.1.0" id="flickityside-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/wprt-addons/assets/wow.min.js?ver=0.3.6" id="agrikole-wow-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/wprt-addons/assets/waitforimages.js?ver=1.0.0" id="agrikole-waitforimages-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/wprt-addons/assets/parallax-scroll.js?ver=0.2.6" id="agrikole-parallaxscroll-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/wprt-addons/assets/shortcodes.js?ver=1.0" id="agrikole-shortcode-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.2.0" id="wpb_composer_front_js-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/wprt-addons/assets/owl.carousel.min.js?ver=2.2.1" id="agrikole-owlcarousel-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/js_composer/assets/lib/prettyphoto/js/jquery.prettyPhoto.min.js?ver=6.2.0" id="prettyphoto-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/owl.carousel.min.js?ver=6.2.0" id="vc_pageable_owl-carousel-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/js_composer/assets/lib/bower/imagesloaded/imagesloaded.pkgd.min.js?ver=6.2.0" id="vc_grid-js-imagesloaded-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-includes/js/underscore.min.js?ver=1.13.7" id="underscore-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/js_composer/assets/lib/vc_waypoints/vc-waypoints.min.js?ver=6.2.0" id="vc_waypoints-js"></script>
+<script type="text/javascript" src="https://enece-sa.com/wp-content/plugins/js_composer/assets/js/dist/vc_grid.min.js?ver=6.2.0" id="vc_grid-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://enece-sa.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://enece-sa.com/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+<script id="shopping-cart-items-updater" type="text/javascript"></script>
+</body>
+</html>
+
+<!-- Page cached by LiteSpeed Cache 7.7 on 2026-01-14 19:26:08 -->
