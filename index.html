@@ -42,14 +42,15 @@
 
   <section class="hero">
     <button class="hero-arrow hero-arrow-prev" aria-label="Imagen anterior">‹</button>
-    <div class="hero-slide" style="--hero-image: url('ENECE-01-160-2-scaled-1.jpg'); background-image: var(--hero-image);">
+    <!-- Puzzle reveal: data-puzzle uses data-image (or nested <img>) -->
+    <div class="hero-slide" data-puzzle data-image="ENECE-01-155-copia.jpg" data-cols="8" data-rows="5" style="--puzzle-image: url('ENECE-01-155-copia.jpg'); background-image: var(--puzzle-image);">
+      <div class="hero-content">PRODUCTORES<br />DE PAPA</div>
+    </div>
+    <div class="hero-slide" data-puzzle data-image="ENECE-01-160-2-scaled-1.jpg" data-cols="8" data-rows="5" style="--puzzle-image: url('ENECE-01-160-2-scaled-1.jpg'); background-image: var(--puzzle-image);">
       <div class="hero-content">CULTIVO Y<br />COMERCIALIZACIÓN</div>
     </div>
-    <div class="hero-slide" style="--hero-image: url('ENECE-01-188.jpg'); background-image: var(--hero-image);">
+    <div class="hero-slide" data-puzzle data-image="ENECE-01-188.jpg" data-cols="8" data-rows="5" style="--puzzle-image: url('ENECE-01-188.jpg'); background-image: var(--puzzle-image);">
       <div class="hero-content">UN CASCO<br />CON HISTORIA</div>
-    </div>
-    <div class="hero-slide" style="--hero-image: url('ENECE-01-155-copia.jpg'); background-image: var(--hero-image);">
-      <div class="hero-content">PRODUCTORES<br />DE PAPA</div>
     </div>
     <div class="hero-controls">
       <button class="hero-dot" aria-label="Ir a slide 1"></button>

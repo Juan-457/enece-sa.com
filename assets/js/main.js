@@ -6,48 +6,115 @@ const nextButton = document.querySelector(".hero-arrow-next");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const mobileBreakpoint = window.matchMedia("(max-width: 768px)");
 let index = 0;
-const puzzleRows = 5;
-const puzzleCols = 5;
+const puzzleElements = Array.from(document.querySelectorAll("[data-puzzle]"));
 
-const buildPuzzlePieces = () => {
-  if (prefersReducedMotion.matches) {
-    return;
+const getPuzzleImage = (element) => {
+  const dataImage = element.dataset.image;
+  if (dataImage) {
+    return dataImage;
   }
-
-  slides.forEach((slide) => {
-    const puzzle = document.createElement("div");
-    puzzle.className = "hero-puzzle";
-    puzzle.setAttribute("aria-hidden", "true");
-    slide.prepend(puzzle);
-
-    slide.style.setProperty("--puzzle-rows", puzzleRows);
-    slide.style.setProperty("--puzzle-cols", puzzleCols);
-
-    for (let row = 0; row < puzzleRows; row += 1) {
-      for (let col = 0; col < puzzleCols; col += 1) {
-        const piece = document.createElement("div");
-        piece.className = "hero-piece";
-        piece.style.width = `${100 / puzzleCols}%`;
-        piece.style.height = `${100 / puzzleRows}%`;
-        piece.style.left = `${(100 / puzzleCols) * col}%`;
-        piece.style.top = `${(100 / puzzleRows) * row}%`;
-        piece.style.backgroundPosition = `${(100 / (puzzleCols - 1)) * col}% ${(100 / (puzzleRows - 1)) * row}%`;
-        piece.style.setProperty("--piece-delay", `${Math.random() * 0.4}s`);
-        piece.style.setProperty("--piece-rotate", `${(Math.random() * 50 - 25).toFixed(2)}deg`);
-        puzzle.appendChild(piece);
-      }
-    }
-  });
+  const img = element.querySelector("img");
+  return img ? img.getAttribute("src") : null;
 };
 
-const triggerPuzzleAnimation = (slide) => {
-  if (prefersReducedMotion.matches) {
+const getPuzzleGrid = (element) => {
+  const desktopCols = Number(element.dataset.cols) || 8;
+  const desktopRows = Number(element.dataset.rows) || 5;
+  const mobileCols = Number(element.dataset.colsMobile) || 4;
+  const mobileRows = Number(element.dataset.rowsMobile) || 6;
+  return mobileBreakpoint.matches
+    ? { cols: mobileCols, rows: mobileRows }
+    : { cols: desktopCols, rows: desktopRows };
+};
+
+const setPuzzleImage = (element) => {
+  const image = getPuzzleImage(element);
+  if (!image) {
+    return;
+  }
+  element.style.setProperty("--puzzle-image", `url("${image}")`);
+  if (!element.style.backgroundImage) {
+    element.style.backgroundImage = "var(--puzzle-image)";
+  }
+};
+
+const createPuzzlePieces = (element) => {
+  if (element.dataset.puzzleBuilt === "true" || prefersReducedMotion.matches) {
     return;
   }
 
-  slide.classList.remove("is-animating");
-  void slide.offsetWidth;
-  slide.classList.add("is-animating");
+  setPuzzleImage(element);
+  element.classList.add("puzzle-ready");
+
+  const overlay = document.createElement("div");
+  overlay.className = "puzzle-overlay";
+  overlay.setAttribute("aria-hidden", "true");
+  element.prepend(overlay);
+
+  const { cols, rows } = getPuzzleGrid(element);
+  element.style.setProperty("--puzzle-cols", cols);
+  element.style.setProperty("--puzzle-rows", rows);
+
+  const offsetRange = 28;
+  for (let row = 0; row < rows; row += 1) {
+    for (let col = 0; col < cols; col += 1) {
+      const piece = document.createElement("div");
+      piece.className = "puzzle-piece";
+      piece.style.width = `${100 / cols}%`;
+      piece.style.height = `${100 / rows}%`;
+      piece.style.left = `${(100 / cols) * col}%`;
+      piece.style.top = `${(100 / rows) * row}%`;
+
+      const backgroundX = cols === 1 ? 50 : (100 / (cols - 1)) * col;
+      const backgroundY = rows === 1 ? 50 : (100 / (rows - 1)) * row;
+      piece.style.backgroundPosition = `${backgroundX}% ${backgroundY}%`;
+
+      const delay = (row + col) * 0.04 + Math.random() * 0.2;
+      piece.style.setProperty("--piece-delay", `${delay.toFixed(2)}s`);
+      piece.style.setProperty("--piece-rotate", `${(Math.random() * 18 - 9).toFixed(2)}deg`);
+      piece.style.setProperty("--piece-x", `${(Math.random() * 2 - 1) * offsetRange}px`);
+      piece.style.setProperty("--piece-y", `${(Math.random() * 2 - 1) * offsetRange}px`);
+      overlay.appendChild(piece);
+    }
+  }
+
+  element.dataset.puzzleBuilt = "true";
+};
+
+const revealPuzzle = (element) => {
+  if (prefersReducedMotion.matches) {
+    return;
+  }
+  createPuzzlePieces(element);
+  requestAnimationFrame(() => element.classList.add("puzzle-revealed"));
+};
+
+const setupPuzzle = () => {
+  if (!puzzleElements.length) {
+    return;
+  }
+
+  if (prefersReducedMotion.matches) {
+    puzzleElements.forEach((element) => setPuzzleImage(element));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          revealPuzzle(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  puzzleElements.forEach((element) => {
+    setPuzzleImage(element);
+    observer.observe(element);
+  });
 };
 
 function showSlide(nextIndex) {
@@ -59,13 +126,7 @@ function showSlide(nextIndex) {
     dot.classList.toggle("active", i === nextIndex);
   });
   index = nextIndex;
-  const activeSlide = slides[nextIndex];
-  if (activeSlide) {
-    triggerPuzzleAnimation(activeSlide);
-  }
 }
-
-buildPuzzlePieces();
 
 dots.forEach((dot, i) => {
   dot.addEventListener("click", () => showSlide(i));
@@ -151,6 +212,7 @@ const onScroll = () => {
   parallaxFrame = requestAnimationFrame(updateParallax);
 };
 
+setupPuzzle();
 setupReveal();
 setupSmoothScroll();
 updateParallax();
