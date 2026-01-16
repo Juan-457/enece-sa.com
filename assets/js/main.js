@@ -145,14 +145,23 @@ const setupPuzzle = () => {
 
   puzzleElements.forEach((element) => {
     setPuzzleImage(element);
+    if (element.closest(".hero")) {
+      if (element.classList.contains("is-active")) {
+        revealPuzzle(element);
+      }
+      return;
+    }
     observer.observe(element);
   });
 };
 
 function showSlide(nextIndex) {
   slides.forEach((slide, i) => {
-    slide.style.display = i === nextIndex ? "grid" : "none";
     slide.classList.toggle("is-active", i === nextIndex);
+    slide.setAttribute("aria-hidden", i === nextIndex ? "false" : "true");
+    if (i === nextIndex && slide.hasAttribute("data-puzzle")) {
+      revealPuzzle(slide);
+    }
   });
   dots.forEach((dot, i) => {
     dot.classList.toggle("active", i === nextIndex);
