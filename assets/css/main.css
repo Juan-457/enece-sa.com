@@ -259,16 +259,7 @@ img {
   font-weight: 800;
   letter-spacing: 1px;
   text-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-  padding: 20px 32px;
-}
-
-.hero-content::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.18);
-  border-radius: 16px;
-  z-index: -1;
+  padding: 0;
 }
 
 .hero-controls {
