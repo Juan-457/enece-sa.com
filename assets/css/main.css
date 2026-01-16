@@ -354,30 +354,46 @@ img {
   letter-spacing: 1px;
   padding: 14px 0;
   overflow: hidden;
+  text-align: center;
 }
 
 .banner-track {
-  display: inline-flex;
-  align-items: center;
-  gap: 48px;
-  white-space: nowrap;
+  display: inline-block;
+  position: relative;
   font-weight: 700;
   font-size: clamp(1rem, 2.4vw, 1.6rem);
-  animation: banner-scroll 18s linear infinite;
-  padding-left: 100%;
+  line-height: 1.2;
+  min-height: 1.2em;
 }
 
 .banner-track span {
-  flex: 0 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: banner-rotate 6s ease-in-out infinite;
+  white-space: nowrap;
 }
 
-@keyframes banner-scroll {
-  from {
-    transform: translateX(0);
+.banner-track span:nth-child(2) {
+  animation-delay: 3s;
+}
+
+@keyframes banner-rotate {
+  0%,
+  10% {
+    opacity: 0;
   }
 
-  to {
-    transform: translateX(-100%);
+  20%,
+  45% {
+    opacity: 1;
+  }
+
+  55%,
+  100% {
+    opacity: 0;
   }
 }
 
