@@ -89,6 +89,7 @@ const createPuzzlePieces = async (element) => {
   element.style.setProperty("--puzzle-rows", rows);
 
   const offsetRange = 28;
+  const overlap = 1;
 
   for (let row = 0; row < rows; row += 1) {
     for (let col = 0; col < cols; col += 1) {
@@ -97,8 +98,8 @@ const createPuzzlePieces = async (element) => {
 
       piece.style.width = `${100 / cols}%`;
       piece.style.height = `${100 / rows}%`;
-      piece.style.left = `${(100 / cols) * col}%`;
-      piece.style.top = `${(100 / rows) * row}%`;
+      piece.style.left = `calc(${(100 / cols) * col}% - ${overlap / 2}px)`;
+      piece.style.top = `calc(${(100 / rows) * row}% - ${overlap / 2}px)`;
 
       const backgroundX = cols === 1 ? 50 : (100 / (cols - 1)) * col;
       const backgroundY = rows === 1 ? 50 : (100 / (rows - 1)) * row;

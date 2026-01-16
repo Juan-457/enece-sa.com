@@ -14,7 +14,7 @@ body {
   margin: 0;
   font-family: "Poppins", "Barlow", sans-serif;
   color: var(--text);
-  background: #e6e1d8;
+  background: #fff;
 }
 
 .reveal {
@@ -50,10 +50,11 @@ img {
 }
 
 .site-shell {
-  width: min(1320px, 96%);
-  margin: 0 auto;
-  background: #ffffff;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  background: transparent;
+  box-shadow: none;
   position: relative;
 }
 
@@ -178,6 +179,7 @@ img {
   position: relative;
   overflow: hidden;
   isolation: isolate;
+  --puzzle-overlap: 1px;
   background-image: var(--puzzle-image);
   background-size: cover;
   background-position: center calc(50% + var(--parallax-offset, 0px));
@@ -211,12 +213,14 @@ img {
 .puzzle-piece {
   position: absolute;
   background-image: var(--puzzle-image);
-  background-size: calc(var(--puzzle-cols) * 100% + 2px) calc(var(--puzzle-rows) * 100% + 2px);
-  width: calc(100% / var(--puzzle-cols) + 1px) !important;
-  height: calc(100% / var(--puzzle-rows) + 1px) !important;
+  background-size: calc(var(--puzzle-cols) * 100% + (var(--puzzle-overlap) * 2))
+    calc(var(--puzzle-rows) * 100% + (var(--puzzle-overlap) * 2));
+  width: calc(100% / var(--puzzle-cols) + var(--puzzle-overlap)) !important;
+  height: calc(100% / var(--puzzle-rows) + var(--puzzle-overlap)) !important;
   opacity: 0;
 
   /* ✅ seam fix (GPU + no subpixel seams) */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform-origin: center;
   transform: translate3d(var(--piece-x), var(--piece-y), 0) scale(0.85) rotate(var(--piece-rotate));
