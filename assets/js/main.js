@@ -42,12 +42,6 @@ const setPuzzleImage = (element) => {
 
   element.style.setProperty("--puzzle-image", `url("${resolvedImage}")`);
 
-  // Si el background-image está vacío, lo seteamos (fallback)
-  const bg = getComputedStyle(element).backgroundImage;
-  if (!bg || bg === "none") {
-    element.style.backgroundImage = `url("${resolvedImage}")`;
-  }
-
   return resolvedImage;
 };
 
@@ -90,6 +84,7 @@ const createPuzzlePieces = async (element) => {
 
   const offsetRange = 28;
   const overlap = 1;
+  let maxDelay = 0;
 
   for (let row = 0; row < rows; row += 1) {
     for (let col = 0; col < cols; col += 1) {
@@ -106,6 +101,7 @@ const createPuzzlePieces = async (element) => {
       piece.style.backgroundPosition = `${backgroundX}% ${backgroundY}%`;
 
       const delay = (row + col) * 0.04 + Math.random() * 0.2;
+      maxDelay = Math.max(maxDelay, delay);
       piece.style.setProperty("--piece-delay", `${delay.toFixed(2)}s`);
       piece.style.setProperty("--piece-rotate", `${(Math.random() * 18 - 9).toFixed(2)}deg`);
       piece.style.setProperty("--piece-x", `${(Math.random() * 2 - 1) * offsetRange}px`);
@@ -115,17 +111,31 @@ const createPuzzlePieces = async (element) => {
     }
   }
 
+  element.dataset.puzzleMaxDelay = maxDelay.toFixed(2);
   element.dataset.puzzleBuilt = "true";
   return true;
 };
 
 const revealPuzzle = async (element) => {
-  if (prefersReducedMotion.matches) return;
+  if (prefersReducedMotion.matches) {
+    element.classList.add("puzzle-revealed");
+    return;
+  }
+
+  if (element.classList.contains("puzzle-revealed")) return;
 
   const built = await createPuzzlePieces(element);
   if (!built) return;
 
-  requestAnimationFrame(() => element.classList.add("puzzle-revealed"));
+  requestAnimationFrame(() => element.classList.add("puzzle-animating"));
+
+  const maxDelay = Number(element.dataset.puzzleMaxDelay || 0);
+  const animationDuration = 0.9;
+  const totalDelayMs = (maxDelay + animationDuration) * 1000;
+
+  window.setTimeout(() => {
+    element.classList.add("puzzle-revealed");
+  }, totalDelayMs);
 };
 
 const setupPuzzle = () => {
@@ -133,13 +143,19 @@ const setupPuzzle = () => {
 
   // En reduced-motion, solo seteamos imagen y listo
   if (prefersReducedMotion.matches) {
-    puzzleElements.forEach((el) => setPuzzleImage(el));
+    puzzleElements.forEach((el) => {
+      setPuzzleImage(el);
+      el.classList.add("puzzle-revealed");
+    });
     return;
   }
 
   // Sin IntersectionObserver, igual seteamos imagen
   if (typeof IntersectionObserver === "undefined") {
-    puzzleElements.forEach((el) => setPuzzleImage(el));
+    puzzleElements.forEach((el) => {
+      setPuzzleImage(el);
+      el.classList.add("puzzle-revealed");
+    });
     return;
   }
 
