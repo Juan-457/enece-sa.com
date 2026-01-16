@@ -144,41 +144,47 @@ img {
   z-index: 2;
 }
 
-.hero-puzzle {
+[data-puzzle] {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-puzzle].puzzle-ready {
+  background-image: none !important;
+}
+
+.puzzle-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
 }
 
-.hero-piece {
+.puzzle-piece {
   position: absolute;
-  background-image: var(--hero-image);
+  background-image: var(--puzzle-image);
   background-size: calc(var(--puzzle-cols) * 100%) calc(var(--puzzle-rows) * 100%);
   opacity: 0;
-  transform: scale(0.6) rotate(var(--piece-rotate));
-  filter: blur(1px);
+  transform: translate(var(--piece-x), var(--piece-y)) scale(0.85) rotate(var(--piece-rotate));
+  filter: blur(2px);
+  will-change: transform, opacity;
 }
 
-.hero-slide.is-animating .hero-piece {
-  animation: puzzle-assemble 0.9s ease forwards;
+.puzzle-revealed .puzzle-piece {
+  animation: puzzle-reveal 0.9s ease forwards;
   animation-delay: var(--piece-delay);
 }
 
-@keyframes puzzle-assemble {
+@keyframes puzzle-reveal {
   0% {
     opacity: 0;
-    transform: scale(0.6) rotate(var(--piece-rotate));
+    transform: translate(var(--piece-x), var(--piece-y)) scale(0.85) rotate(var(--piece-rotate));
     filter: blur(2px);
   }
-  60% {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-    filter: blur(0);
-  }
   100% {
-    opacity: 0;
-    transform: scale(1) rotate(0deg);
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    filter: blur(0);
   }
 }
 
