@@ -186,6 +186,8 @@ img {
   overflow: hidden;
   isolation: isolate;
   --puzzle-overlap: 1px;
+  --puzzle-bg-size: 100% 100%;
+  --puzzle-bg-position: 0% 0%;
   background-image: none;
 
   /* ✅ anti-seam helpers */
@@ -198,8 +200,8 @@ img {
   position: absolute;
   inset: 0;
   background-image: var(--puzzle-image);
-  background-size: cover;
-  background-position: center calc(50% + var(--parallax-offset, 0px));
+  background-size: var(--puzzle-bg-size);
+  background-position: var(--puzzle-bg-position);
   transform: translate3d(0, var(--hero-zoom-shift, 0%), 0) scale(var(--hero-zoom, 1));
   transform-origin: center;
   opacity: 0;
@@ -230,6 +232,10 @@ html:not(.js) [data-puzzle]::before {
   background-image: none;
 }
 
+.puzzle-start::before {
+  opacity: 0;
+}
+
 .puzzle-overlay {
   position: absolute;
   inset: 0;
@@ -238,6 +244,10 @@ html:not(.js) [data-puzzle]::before {
   transform: translate3d(0, var(--hero-zoom-shift, 0%), 0) scale(var(--hero-zoom, 1));
   transform-origin: center;
   transition: opacity 400ms ease;
+}
+
+.puzzle-start .puzzle-overlay {
+  opacity: 1;
 }
 
 .puzzle-piece {
