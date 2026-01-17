@@ -10,6 +10,8 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
 const mobileBreakpoint = window.matchMedia("(max-width: 768px)");
 
 let index = 0;
+let carouselTimer;
+const carouselDelayMs = 6000;
 
 const puzzleElements = Array.from(document.querySelectorAll("[data-puzzle]"));
 const puzzleTimers = new WeakMap();
@@ -125,6 +127,9 @@ const resetPuzzleState = (element) => {
 };
 
 const startPuzzle = async (element) => {
+  resetPuzzleState(element);
+  element.classList.add("puzzle-start");
+
   if (prefersReducedMotion.matches) {
     setPuzzleImage(element);
     element.classList.add("puzzle-done");
@@ -134,9 +139,11 @@ const startPuzzle = async (element) => {
   if (element.classList.contains("puzzle-revealed")) return;
 
   const built = await createPuzzlePieces(element);
-  if (!built) return;
+  if (!built) {
+    element.classList.add("puzzle-done");
+    return;
+  }
 
-  element.classList.add("puzzle-start");
   requestAnimationFrame(() => {
     element.classList.add("puzzle-revealed");
     element.classList.add("puzzle-animating");
@@ -144,7 +151,7 @@ const startPuzzle = async (element) => {
 
   const maxDelay = Number(element.dataset.puzzleMaxDelay || 0);
   const animationDuration = 0.9;
-  const totalDelayMs = (maxDelay + animationDuration) * 1000;
+  const totalDelayMs = (maxDelay + animationDuration) * 1000 + 150;
 
   const timer = window.setTimeout(() => {
     element.classList.add("puzzle-done");
@@ -203,22 +210,33 @@ const setupPuzzle = () => {
 };
 
 function showSlide(nextIndex) {
+  const boundedIndex = ((nextIndex % slides.length) + slides.length) % slides.length;
+
   slides.forEach((slide, i) => {
-    const isActive = i === nextIndex;
+    const isActive = i === boundedIndex;
     slide.classList.toggle("is-active", isActive);
     slide.setAttribute("aria-hidden", isActive ? "false" : "true");
 
     if (slide.hasAttribute("data-puzzle")) {
-      resetPuzzleState(slide);
       if (isActive) {
         startPuzzle(slide);
+      } else {
+        resetPuzzleState(slide);
       }
     }
   });
 
-  dots.forEach((dot, i) => dot.classList.toggle("active", i === nextIndex));
+  dots.forEach((dot, i) => dot.classList.toggle("active", i === boundedIndex));
 
-  index = nextIndex;
+  index = boundedIndex;
+
+  if (slides.length > 1) {
+    if (carouselTimer) window.clearTimeout(carouselTimer);
+    carouselTimer = window.setTimeout(() => {
+      const next = (index + 1) % slides.length;
+      showSlide(next);
+    }, carouselDelayMs);
+  }
 }
 
 // Slider init
@@ -242,11 +260,6 @@ if (slides.length > 1) {
       showSlide(next);
     });
   }
-
-  setInterval(() => {
-    const next = (index + 1) % slides.length;
-    showSlide(next);
-  }, 6000);
 }
 
 // Reveal
