@@ -399,7 +399,9 @@ html:not(.js) [data-puzzle]::before {
 .agri-gallery {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  gap: 8px;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .gallery-item {
@@ -407,9 +409,9 @@ html:not(.js) [data-puzzle]::before {
   padding: 0;
   background: transparent;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -417,13 +419,13 @@ html:not(.js) [data-puzzle]::before {
   display: block;
   width: 100%;
   height: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 
 .gallery-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 26px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.18);
 }
 
 .gallery-item:focus-visible {
