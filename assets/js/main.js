@@ -372,6 +372,52 @@ const setupBannerTyping = () => {
   });
 };
 
+const setupGalleryLightbox = () => {
+  const lightbox = document.querySelector(".gallery-lightbox");
+  const items = Array.from(document.querySelectorAll("[data-gallery-image]"));
+  if (!lightbox || !items.length) return;
+
+  const lightboxImage = lightbox.querySelector(".gallery-lightbox-image");
+  const closeTriggers = Array.from(lightbox.querySelectorAll("[data-lightbox-close]"));
+
+  if (!lightboxImage) return;
+
+  const openLightbox = (image, alt) => {
+    lightboxImage.src = new URL(image, document.baseURI).href;
+    lightboxImage.alt = alt || "";
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("lightbox-open");
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImage.src = "";
+    lightboxImage.alt = "";
+    document.body.classList.remove("lightbox-open");
+  };
+
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      const image = item.dataset.galleryImage;
+      const alt = item.dataset.galleryAlt || "";
+      if (!image) return;
+      openLightbox(image, alt);
+    });
+  });
+
+  closeTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", closeLightbox);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+      closeLightbox();
+    }
+  });
+};
+
 const contactEndpoint =
   "https://default5243832e5a814f3d9656d9f5b8364a.23.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/b8765be95b7d4726b3282a6870e94886/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=OFwPEdmfkd3Aiu5cWEVwlGbmg56Wnz_hgi3w9Lt0yko";
 
@@ -467,6 +513,7 @@ setupPuzzle();
 setupReveal();
 setupSmoothScroll();
 setupBannerTyping();
+setupGalleryLightbox();
 initContactForms();
 updateParallax();
 
