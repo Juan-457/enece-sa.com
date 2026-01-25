@@ -124,6 +124,10 @@ const resetPuzzleState = (element) => {
   if (existingTimer) window.clearTimeout(existingTimer);
   puzzleTimers.delete(element);
   element.classList.remove("puzzle-start", "puzzle-revealed", "puzzle-animating", "puzzle-done");
+  const overlay = element.querySelector(":scope > .puzzle-overlay");
+  if (overlay) overlay.remove();
+  delete element.dataset.puzzleBuilt;
+  delete element.dataset.puzzleMaxDelay;
 };
 
 const startPuzzle = async (element) => {
