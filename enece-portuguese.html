@@ -214,14 +214,15 @@
       <div class="container reveal">
         <h2 class="section-heading">Formulário de contato</h2>
         <img class="section-separator" src="separador200x46.png" alt="Separador" />
-        <form>
+        <form class="contact-form" data-success-message="Obrigado! Sua mensagem foi enviada." data-error-message="Não foi possível enviar a mensagem. Tente novamente.">
           <div class="form-grid">
-            <input type="text" placeholder="Nome" required />
-            <input type="email" placeholder="E-mail" required />
-            <input type="text" placeholder="Telefone" required />
-            <input type="text" placeholder="Assunto" required />
+            <input type="text" name="nombre" placeholder="Nome" required />
+            <input type="email" name="mail" placeholder="E-mail" required />
+            <input type="text" name="telefono" placeholder="Telefone" required />
+            <input type="text" name="Asunto" placeholder="Assunto" required />
           </div>
-          <textarea rows="6" placeholder="Mensagem"></textarea>
+          <textarea rows="6" name="Mensaje" placeholder="Mensagem" required></textarea>
+          <p class="form-status" role="status" aria-live="polite"></p>
           <button type="submit">Enviar mensagem</button>
         </form>
       </div>

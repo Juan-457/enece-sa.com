@@ -213,14 +213,15 @@
       <div class="container reveal">
         <h2 class="section-heading">Contact form</h2>
         <img class="section-separator" src="separador200x46.png" alt="Separator" />
-        <form>
+        <form class="contact-form" data-success-message="Thanks! Your message has been sent." data-error-message="We couldn't send your message. Please try again.">
           <div class="form-grid">
-            <input type="text" placeholder="Name" required />
-            <input type="email" placeholder="Email" required />
-            <input type="text" placeholder="Phone" required />
-            <input type="text" placeholder="Subject" required />
+            <input type="text" name="nombre" placeholder="Name" required />
+            <input type="email" name="mail" placeholder="Email" required />
+            <input type="text" name="telefono" placeholder="Phone" required />
+            <input type="text" name="Asunto" placeholder="Subject" required />
           </div>
-          <textarea rows="6" placeholder="Message"></textarea>
+          <textarea rows="6" name="Mensaje" placeholder="Message" required></textarea>
+          <p class="form-status" role="status" aria-live="polite"></p>
           <button type="submit">Send message</button>
         </form>
       </div>

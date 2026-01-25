@@ -368,6 +368,76 @@ const setupBannerTyping = () => {
   });
 };
 
+const contactEndpoint =
+  "https://default5243832e5a814f3d9656d9f5b8364a.23.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/b8765be95b7d4726b3282a6870e94886/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=OFwPEdmfkd3Aiu5cWEVwlGbmg56Wnz_hgi3w9Lt0yko";
+
+const setFormStatus = (form, message, isError = false) => {
+  let status = form.querySelector(".form-status");
+  if (!status) {
+    status = document.createElement("p");
+    status.className = "form-status";
+    status.setAttribute("role", "status");
+    status.setAttribute("aria-live", "polite");
+    form.appendChild(status);
+  }
+
+  status.textContent = message;
+  status.classList.toggle("is-error", isError);
+};
+
+const setFormDisabled = (form, disabled) => {
+  const fields = Array.from(form.querySelectorAll("input, textarea, button"));
+  fields.forEach((field) => {
+    field.disabled = disabled;
+  });
+};
+
+const initContactForms = () => {
+  const forms = Array.from(document.querySelectorAll(".contact-form"));
+  if (!forms.length) return;
+
+  forms.forEach((form) => {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const payload = {
+        nombre: form.elements.nombre?.value?.trim() ?? "",
+        mail: form.elements.mail?.value?.trim() ?? "",
+        telefono: form.elements.telefono?.value?.trim() ?? "",
+        Asunto: form.elements.Asunto?.value?.trim() ?? "",
+        Mensaje: form.elements.Mensaje?.value?.trim() ?? "",
+      };
+
+      const successMessage = form.dataset.successMessage || "Mensaje enviado.";
+      const errorMessage = form.dataset.errorMessage || "No se pudo enviar.";
+
+      setFormStatus(form, "");
+      setFormDisabled(form, true);
+
+      try {
+        const response = await fetch(contactEndpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+
+        if (!response.ok) {
+          throw new Error(`Request failed: ${response.status}`);
+        }
+
+        setFormStatus(form, successMessage);
+        form.reset();
+      } catch (error) {
+        setFormStatus(form, errorMessage, true);
+      } finally {
+        setFormDisabled(form, false);
+      }
+    });
+  });
+};
+
 // Parallax
 const hero = document.querySelector(".hero");
 let parallaxFrame;
@@ -393,6 +463,7 @@ setupPuzzle();
 setupReveal();
 setupSmoothScroll();
 setupBannerTyping();
+initContactForms();
 updateParallax();
 
 window.addEventListener("scroll", onScroll, { passive: true });
