@@ -312,6 +312,62 @@ const setupSmoothScroll = () => {
   });
 };
 
+// Banner typing
+const setupBannerTyping = () => {
+  const tracks = Array.from(document.querySelectorAll(".banner-track[data-words]"));
+  if (!tracks.length) return;
+
+  tracks.forEach((track) => {
+    const rawWords = track.dataset.words || "";
+    const words = rawWords
+      .split("|")
+      .map((word) => word.trim())
+      .filter(Boolean);
+
+    if (!words.length) return;
+
+    const target = track.querySelector(".banner-typing") || track;
+
+    if (prefersReducedMotion.matches) {
+      target.textContent = words[0];
+      return;
+    }
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    const type = () => {
+      if (!document.body.contains(track)) return;
+
+      const currentWord = words[wordIndex];
+
+      if (deleting) {
+        charIndex = Math.max(charIndex - 1, 0);
+      } else {
+        charIndex = Math.min(charIndex + 1, currentWord.length);
+      }
+
+      target.textContent = currentWord.slice(0, charIndex);
+
+      let delay = deleting ? 45 : 70;
+
+      if (!deleting && charIndex === currentWord.length) {
+        delay = 1600;
+        deleting = true;
+      } else if (deleting && charIndex === 0) {
+        deleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        delay = 500;
+      }
+
+      window.setTimeout(type, delay);
+    };
+
+    type();
+  });
+};
+
 // Parallax
 const hero = document.querySelector(".hero");
 let parallaxFrame;
@@ -336,6 +392,7 @@ const onScroll = () => {
 setupPuzzle();
 setupReveal();
 setupSmoothScroll();
+setupBannerTyping();
 updateParallax();
 
 window.addEventListener("scroll", onScroll, { passive: true });

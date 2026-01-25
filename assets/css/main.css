@@ -469,7 +469,9 @@ html:not(.js) [data-puzzle]::before {
 }
 
 .banner-track {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   font-weight: 700;
   font-size: clamp(1rem, 2.4vw, 1.6rem);
@@ -477,32 +479,31 @@ html:not(.js) [data-puzzle]::before {
   min-height: 1.2em;
 }
 
-.banner-track span {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  animation: banner-rotate 6s ease-in-out infinite;
+.banner-typing {
+  position: relative;
+  padding-right: 6px;
   white-space: nowrap;
 }
 
-.banner-track span:nth-child(2) {
-  animation-delay: 3s;
+.banner-typing::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 2px;
+  height: 1em;
+  background: #fff;
+  transform: translateY(-50%);
+  animation: banner-caret 0.9s step-end infinite;
 }
 
-@keyframes banner-rotate {
+@keyframes banner-caret {
   0%,
-  10% {
-    opacity: 0;
-  }
-
-  20%,
   45% {
     opacity: 1;
   }
 
-  55%,
+  46%,
   100% {
     opacity: 0;
   }
@@ -569,6 +570,11 @@ footer {
   .banner-track {
     animation: none;
     padding-left: 0;
+  }
+
+  .banner-typing::after {
+    animation: none;
+    opacity: 1;
   }
 
   button,
