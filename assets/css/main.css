@@ -469,20 +469,21 @@ html:not(.js) [data-puzzle]::before {
 }
 
 .banner-track {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   position: relative;
   font-weight: 700;
   font-size: clamp(1rem, 2.4vw, 1.6rem);
   line-height: 1.2;
   min-height: 1.2em;
+  max-width: 100%;
+  text-align: center;
 }
 
 .banner-typing {
   position: relative;
   padding-right: 6px;
-  white-space: nowrap;
+  display: inline-block;
+  white-space: normal;
 }
 
 .banner-typing::after {
