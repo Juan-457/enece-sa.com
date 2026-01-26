@@ -54,13 +54,14 @@ img {
   width: 100%;
   max-width: none;
   margin: 0;
+  padding-top: 92px;
   background: transparent;
   box-shadow: none;
   position: relative;
 }
 
 .site-header {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -328,25 +329,27 @@ html:not(.js) [data-puzzle]::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  border-radius: 0;
   border: none;
-  background: rgba(0, 0, 0, 0.35);
+  background: transparent;
   color: #fff;
-  font-size: 26px;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: 400;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 3;
-  transition: background 0.2s ease, transform 0.2s ease;
+  opacity: 0.85;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .hero-arrow:hover {
-  background: rgba(0, 0, 0, 0.5);
-  transform: translateY(-50%) scale(1.05);
+  opacity: 1;
+  transform: translateY(-50%) scale(1.08);
 }
 
 .hero-arrow-prev {
