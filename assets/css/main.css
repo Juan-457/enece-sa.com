@@ -110,6 +110,15 @@ img {
   letter-spacing: 0.4px;
 }
 
+.nav-menu a:hover span,
+.nav-menu a:focus-visible span {
+  color: var(--purple);
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
 .nav-menu .active a span {
   background: #fff;
   color: #222;
