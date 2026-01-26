@@ -133,6 +133,12 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
+.header-social svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
 /* ------------------------------------------------------------
    HERO + PUZZLE (full working block)
 ------------------------------------------------------------ */
