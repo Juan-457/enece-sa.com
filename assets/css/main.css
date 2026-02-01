@@ -75,8 +75,17 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  width: 100%;
+  max-width: none;
+  padding: 18px clamp(20px, 4vw, 56px);
   gap: 24px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  padding-right: 28px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .logo img {
@@ -140,6 +149,13 @@ img {
   color: #fff;
   font-weight: 700;
   border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.header-social {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 28px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .header-social svg {
@@ -720,6 +736,13 @@ footer {
 @media (max-width: 768px) {
   .header-inner {
     flex-direction: column;
+    padding: 18px 20px;
+  }
+
+  .logo,
+  .header-social {
+    padding: 0;
+    border: none;
   }
 
   .site-header {
