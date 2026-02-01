@@ -162,8 +162,8 @@ img {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  --hero-zoom: 1.55;
-  --hero-zoom-shift: -10%;
+  --hero-zoom: 1.28;
+  --hero-zoom-shift: -3%;
 }
 
 /* Base slide styling (works with or without JS) */
@@ -313,8 +313,7 @@ html:not(.js) [data-puzzle]::before {
   font-size: clamp(2rem, 5vw, 4.5rem);
   font-weight: 800;
   letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.68);
-  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
   padding: 0;
 }
 
@@ -345,12 +344,12 @@ html:not(.js) [data-puzzle]::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  border-radius: 0;
   border: none;
-  background: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.8);
+  background: transparent;
+  color: #fff;
   font-size: 40px;
   font-weight: 400;
   display: inline-flex;
@@ -359,7 +358,7 @@ html:not(.js) [data-puzzle]::before {
   cursor: pointer;
   z-index: 3;
   opacity: 0.85;
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.45);
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
