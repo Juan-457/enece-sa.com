@@ -9,6 +9,38 @@ const nextButton = document.querySelector(".hero-arrow-next");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const mobileBreakpoint = window.matchMedia("(max-width: 768px)");
 
+const navToggle = document.querySelector(".nav-toggle");
+const siteHeader = document.querySelector(".site-header");
+
+const closeNav = () => {
+  if (!siteHeader || !navToggle) return;
+  siteHeader.classList.remove("nav-open");
+  navToggle.setAttribute("aria-expanded", "false");
+};
+
+if (navToggle && siteHeader) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = siteHeader.classList.toggle("nav-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  const navMenu = siteHeader.querySelector(".nav-menu");
+  if (navMenu) {
+    navMenu.addEventListener("click", (event) => {
+      const link = event.target.closest("a");
+      if (link && mobileBreakpoint.matches) {
+        closeNav();
+      }
+    });
+  }
+
+  mobileBreakpoint.addEventListener("change", (event) => {
+    if (!event.matches) {
+      closeNav();
+    }
+  });
+}
+
 let index = 0;
 let carouselTimer;
 const carouselDelayMs = 6000;

@@ -98,6 +98,73 @@ img {
   justify-content: center;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+
+.nav-toggle-icon,
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 999px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle-icon {
+  position: relative;
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle-icon::before {
+  top: -6px;
+}
+
+.nav-toggle-icon::after {
+  top: 6px;
+}
+
+.site-header.nav-open .nav-toggle-icon {
+  transform: rotate(45deg);
+}
+
+.site-header.nav-open .nav-toggle-icon::before {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.site-header.nav-open .nav-toggle-icon::after {
+  opacity: 0;
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -735,7 +802,9 @@ footer {
 
 @media (max-width: 768px) {
   .header-inner {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     padding: 18px 20px;
   }
 
@@ -748,6 +817,37 @@ footer {
   .site-header {
     position: static;
     background: #111;
+  }
+
+  .site-header nav {
+    order: 3;
+    flex: 0 0 100%;
+    justify-content: flex-start;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 0 4px;
+  }
+
+  .site-header.nav-open .nav-menu {
+    display: flex;
+  }
+
+  .header-social {
+    order: 4;
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: 10px;
   }
 
   .products-grid {
