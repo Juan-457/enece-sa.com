@@ -607,7 +607,8 @@ body.lightbox-open {
 
 @media (max-width: 600px) {
   .agri-gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
   }
 }
 
@@ -801,6 +802,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .site-shell {
+    padding-top: 0;
+  }
+
   .header-inner {
     flex-direction: row;
     flex-wrap: wrap;
