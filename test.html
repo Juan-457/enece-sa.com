@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ENECE S.A. | Concepto Aerial</title>
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <style>
+    :root {
+      --cyan: #4ec8d7;
+      --cyan-strong: #1ca7ba;
+      --ink: #0f1d24;
+      --soft: #edf6f8;
+      --card: #ffffff;
+      --muted: #6f8690;
+      --radius: 22px;
+      --shadow: 0 20px 40px rgba(6, 20, 28, 0.2);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Poppins", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #e7eff2;
+      line-height: 1.5;
+    }
+    .container { width: min(1140px, 92%); margin: 0 auto; }
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(rgba(6, 20, 26, .58), rgba(6, 20, 26, .68)), url("ENECE-01-155-copia.jpg") center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 12px 0 34px;
+      color: #fff;
+    }
+    .topbar {
+      background: var(--cyan);
+      border-radius: 14px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      position: sticky;
+      top: 10px;
+      z-index: 20;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; color: white; text-decoration: none; font-weight: 700; }
+    .logo img { width: 140px; height: auto; }
+    .menu { display: flex; flex-wrap: wrap; gap: 18px; list-style: none; margin: 0; padding: 0; }
+    .menu a { color: #eafeff; text-decoration: none; font-weight: 600; font-size: .95rem; }
+    .menu a:hover { opacity: .8; }
+    .hero-copy { text-align: center; margin-top: 70px; }
+    .hero-copy p { font-size: clamp(1rem, 2vw, 1.3rem); margin: 0 0 8px; }
+    .hero-copy h1 { font-size: clamp(2.1rem, 6vw, 4.5rem); margin: 0 0 16px; line-height: 1.05; }
+    .btn-outline {
+      display: inline-block;
+      text-decoration: none;
+      border: 2px solid var(--cyan);
+      color: var(--cyan);
+      border-radius: 999px;
+      padding: 11px 28px;
+      font-weight: 700;
+      background: rgba(255, 255, 255, .06);
+    }
+    .hero-stats {
+      width: min(1100px, 95%);
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 999px;
+      color: var(--ink);
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+      padding: 14px 18px;
+      box-shadow: 0 20px 42px rgba(5, 10, 14, .4);
+    }
+    .stat { display: flex; align-items: center; gap: 12px; }
+    .dot {
+      width: 42px; height: 42px; border-radius: 999px; border: 2px solid #d7f0f4;
+      display: grid; place-items: center; color: var(--cyan-strong); font-weight: 700;
+    }
+    .stat small { display: block; color: var(--muted); font-weight: 600; }
+    .stat strong { color: var(--cyan-strong); }
+    .cta { border: 0; border-radius: 999px; background: var(--cyan); color: #fff; padding: 13px 20px; font-weight: 700; }
+
+    main section { padding: 78px 0; }
+    .section-title { color: var(--cyan-strong); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: .85rem; }
+    .section-heading { font-size: clamp(1.7rem, 3.4vw, 2.8rem); line-height: 1.1; margin: 8px 0 18px; }
+
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .light { background: var(--soft); }
+
+    .highlights { display: grid; gap: 14px; }
+    .highlight-box { background: #fff; border-radius: 18px; padding: 16px 18px; border-left: 5px solid var(--cyan); box-shadow: var(--shadow); }
+    .highlight-box h3 { margin: 0; font-size: 1.1rem; }
+
+    .products-grid { display: grid; grid-template-columns: repeat(5, minmax(160px, 1fr)); gap: 16px; }
+    .product-card { overflow: hidden; padding: 0; }
+    .product-card img { width: 100%; height: 170px; object-fit: cover; display: block; }
+    .product-card .content { padding: 16px; }
+    .product-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .product-card p { margin: 0; color: #4f6068; font-size: .92rem; }
+
+    .banner {
+      background: linear-gradient(90deg, #21b4c7, #66d2de);
+      color: #fff;
+      padding: 18px;
+      border-radius: 16px;
+      text-align: center;
+      font-weight: 700;
+      font-size: clamp(1rem, 2.2vw, 1.4rem);
+      box-shadow: var(--shadow);
+    }
+    .banner-track {
+      min-height: 1.5em;
+      display: grid;
+      place-items: center;
+    }
+    .banner-typing {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+    .banner-typing::after {
+      content: "|";
+      animation: cursor-blink .8s steps(1) infinite;
+      opacity: .9;
+    }
+    @keyframes cursor-blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .gallery-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 12px; }
+
+    .instagram-story-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .story {
+      text-decoration: none; color: inherit; background: #fff; border-radius: 16px; padding: 12px; box-shadow: var(--shadow);
+    }
+    .story img { width: 100%; height: 170px; object-fit: cover; border-radius: 12px; }
+    .story h4 { margin: 10px 0 2px; }
+    .story p { margin: 0; color: #58717b; font-size: .9rem; }
+
+    .map-embed { width: 100%; height: 320px; border: 0; border-radius: 16px; }
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: 12px 13px; border: 1px solid #d8e7eb; border-radius: 10px; font: inherit;
+    }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .contact-form button { margin-top: 12px; border: 0; background: var(--cyan); color: #fff; padding: 12px 20px; border-radius: 999px; font-weight: 700; }
+    footer { padding: 26px 0; text-align: center; color: #627981; }
+
+    @media (max-width: 980px) {
+      .split { grid-template-columns: 1fr; }
+      .hero-stats { border-radius: 26px; grid-template-columns: 1fr 1fr; }
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .instagram-story-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .topbar { position: static; }
+      .hero-stats { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .products-grid, .gallery-grid, .instagram-story-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero" id="inicio">
+    <div class="container topbar">
+      <a href="#" class="logo"><img src="logovioleta.png" alt="ENECE" /> ENECE</a>
+      <nav>
+        <ul class="menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#empresa">Empresa</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#ubi">Ubicación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="enece-portuguese.html"><img src="Flag_of_Brazil.svg" alt="Português" width="22" /></a></li>
+          <li><a href="enece-ingles.html"><img src="Flag_of_United_States.svg" alt="English" width="22" /></a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container hero-copy">
+      <p>Explotación agrícola con más de 60 años de experiencia</p>
+      <h1>PRODUCTORES DE PAPA</h1>
+      <a class="btn-outline" href="#productos">Ver variedades</a>
+    </div>
+
+    <div>
+      <div class="hero-stats">
+        <article class="stat"><span class="dot">🌱</span><div><small>Especialidad</small><strong>Papa y semilla</strong></div></article>
+        <article class="stat"><span class="dot">🏭</span><div><small>Servicios</small><strong>Industrialización y exportación</strong></div></article>
+        <article class="stat"><span class="dot">❄️</span><div><small>Infraestructura</small><strong>Cámaras frigoríficas</strong></div></article>
+        <button class="cta" type="button" onclick="location.href='#contacto'">Explorar más</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="enece">
+      <div class="container split">
+        <div>
+          <div class="section-title">Bienvenidos a ENECE</div>
+          <h2 class="section-heading">Experiencia en cultivo y comercialización de papa</h2>
+          <p>Desde los comienzos nos dedicamos a la producción, industrialización y exportación de diversas variedades de papas. También producimos papa-semilla para autoabastecimiento y para proveer a terceros.</p>
+        </div>
+        <img src="DSC_5528.jpg" alt="Cosecha de papas" style="width:100%;border-radius:20px;box-shadow:var(--shadow);" />
+      </div>
+    </section>
+
+    <section class="light">
+      <div class="container split">
+        <div class="highlights">
+          <div class="highlight-box"><h3>Nuestra prioridad, cuidar nuestro medio ambiente</h3></div>
+          <div class="highlight-box"><h3>Nuestros productos</h3></div>
+        </div>
+        <div class="card">
+          <p><strong>ENECE S.A.</strong> es continuidad de una empresa familiar dedicada a la producción de papa y a la mejora constante en procesos agrícolas.</p>
+          <p>Seguimos creciendo, aprendiendo y superándonos para entregar productos de calidad para cada cliente.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="productos">
+      <div class="container">
+        <div class="section-title">Variedades</div>
+        <h2 class="section-heading">Nuestros productos</h2>
+        <div class="products-grid">
+          <article class="card product-card"><img src="fondo-violeta-e1719164240985.jpg" alt="Atlantic" /><div class="content"><h3>ATLANTIC</h3><p>Variedad para la industria de chips. Tubérculo redondeado, piel casposa, ojos superficiales y carne blanca.</p></div></article>
+          <article class="card product-card"><img src="fondo-verde-e1719164221620.jpg" alt="Innovator" /><div class="content"><h3>INNOVATOR</h3><p>Tubérculos oblongos a alargados, piel blanca amarilla rugosa, carne color crema y tamaño grande.</p></div></article>
+          <article class="card product-card"><img src="fondo-rosita-e1719164259482.jpg" alt="Taurus" /><div class="content"><h3>TAURUS</h3><p>Tubérculos grandes, redondos a oval redondeados, piel amarilla y ojos superficiales resistentes.</p></div></article>
+          <article class="card product-card"><img src="violeta-4-blanc-e1719164172457.jpg" alt="Spunta" /><div class="content"><h3>SPUNTA</h3><p>Tubérculos oval alargados, piel suave, carne amarilla, rendimiento muy alto y madurez semitemprana.</p></div></article>
+          <article class="card product-card"><img src="negro-y-blanco-e1719164197401.jpg" alt="Sagitta" /><div class="content"><h3>SAGITTA</h3><p>Tubérculos oval alargados, piel suave, carne amarilla, tamaño grande y madurez tardía.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container banner"><div class="banner-track" data-words="Explotación agrícola|Más de 60 años de experiencia"><span class="banner-typing" aria-live="polite">Explotación agrícola</span></div></div>
+    </section>
+
+    <section class="light" id="empresa">
+      <div class="container split">
+        <div>
+          <div class="section-title">Empresa</div>
+          <h2 class="section-heading">Una mejor agricultura</h2>
+          <p>Nuestra historia comienza en el año 2015, a partir de la vocación y ganas de continuar prosperando en el rubro de producción de una hortaliza tan fundamental como lo es la papa.</p>
+          <p>Somos la continuidad de una empresa familiar que cuenta con más de 60 años de experiencia en cultivo y comercialización de papas.</p>
+          <p>Poseemos varias cámaras frigoríficas de almacenamiento para cada uno de nuestros clientes, manteniendo los productos en excelente estado.</p>
+        </div>
+        <div class="gallery-grid">
+          <img src="6707308797_7fac1d96b9_b.jpg" alt="Flor en cultivo de papa" />
+          <img src="IMG_4489-scaled-1.jpg" alt="Surcos de cultivo con riego" />
+          <img src="IMG_4328-scaled-1.jpg" alt="Maquinaria sembrando" />
+          <img src="IMG_8140-scaled-1.jpg" alt="Bolsa de papas" />
+          <img src="IMG_4693-scaled-1.jpg" alt="Selección de papas" />
+          <img src="IMG_8792-scaled-1.jpg" alt="Papas listas" />
+          <img src="5d7a85a6b5a94_907_510.jpg" alt="Cosecha manual" />
+          <img src="c1ef71a8-ccc6-4445-84b5-1bac551e3eae1.jpg" alt="Cultivo extensivo" />
+          <img src="IMG_7256.jpeg" alt="Planta de papa en flor" />
+        </div>
+      </div>
+    </section>
+
+    <section id="instagram">
+      <div class="container">
+        <div class="section-title">Instagram</div>
+        <h2 class="section-heading">Últimas historias de @enece.agro</h2>
+        <p>Hicimos una sección dedicada a historias con acceso directo al perfil y al visor de historias activo de la cuenta.</p>
+        <div class="instagram-story-grid">
+          <a class="story" href="https://www.instagram.com/stories/enece.agro/" target="_blank" rel="noopener noreferrer"><img src="IMG_7256.jpeg" alt="Historia cultivo" /><h4>Historia 1</h4><p>Ver historia activa en Instagram.</p></a>
+          <a class="story" href="https://www.instagram.com/stories/enece.agro/" target="_blank" rel="noopener noreferrer"><img src="IMG_4328-scaled-1.jpg" alt="Historia maquinaria" /><h4>Historia 2</h4><p>Últimas novedades del campo.</p></a>
+          <a class="story" href="https://www.instagram.com/stories/enece.agro/" target="_blank" rel="noopener noreferrer"><img src="IMG_8792-scaled-1.jpg" alt="Historia cosecha" /><h4>Historia 3</h4><p>Producción y clasificación.</p></a>
+          <a class="story" href="https://www.instagram.com/enece.agro/?hl=es" target="_blank" rel="noopener noreferrer"><img src="ENECE-01-188.jpg" alt="Perfil Instagram" /><h4>Perfil ENECE</h4><p>Abrir cuenta completa y destacadas.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="light" id="ubi">
+      <div class="container card">
+        <h2 class="section-heading">Ubicación</h2>
+        <p>Av San Martín, Acceso a Comandante Nicanor Otamendi. Prov. Buenos Aires. Argentina.</p>
+        <p>Tel: +54-2291-480950 | Whatsapp: +542236937609 | E-mail: contacto@enece-sa.com</p>
+        <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d815.5725727663018!2d-57.84652779999999!3d-38.1018611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzjCsDA2JzA2LjciUyA1N8KwNTAnNDcuNSJX!5e1!3m2!1ses!2sar!4v1717076735467!5m2!1ses!2sar" loading="lazy" title="Mapa ENECE"></iframe>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="container card">
+        <div class="section-title">Contacto</div>
+        <h2 class="section-heading">Formulario de contacto</h2>
+        <form class="contact-form">
+          <div class="form-grid">
+            <input type="text" name="nombre" placeholder="Nombre" required />
+            <input type="email" name="mail" placeholder="Mail" required />
+            <input type="text" name="telefono" placeholder="Teléfono" required />
+            <input type="text" name="asunto" placeholder="Asunto" required />
+          </div>
+          <textarea rows="5" name="mensaje" placeholder="Mensaje" required></textarea>
+          <button type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">Created - Umanoai - 2024</div>
+  </footer>
+  <script>
+    (() => {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const tracks = Array.from(document.querySelectorAll('.banner-track[data-words]'));
+      if (!tracks.length) return;
+
+      tracks.forEach((track) => {
+        const words = (track.dataset.words || '')
+          .split('|')
+          .map((word) => word.trim())
+          .filter(Boolean);
+
+        if (!words.length) return;
+
+        const target = track.querySelector('.banner-typing') || track;
+
+        if (prefersReducedMotion.matches) {
+          target.textContent = words[0];
+          return;
+        }
+
+        let wordIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
+
+        const type = () => {
+          if (!document.body.contains(track)) return;
+
+          const currentWord = words[wordIndex];
+
+          charIndex = deleting
+            ? Math.max(charIndex - 1, 0)
+            : Math.min(charIndex + 1, currentWord.length);
+
+          target.textContent = currentWord.slice(0, charIndex);
+
+          let delay = deleting ? 45 : 70;
+
+          if (!deleting && charIndex === currentWord.length) {
+            delay = 1600;
+            deleting = true;
+          } else if (deleting && charIndex === 0) {
+            deleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            delay = 500;
+          }
+
+          window.setTimeout(type, delay);
+        };
+
+        type();
+      });
+    })();
+  </script>
+
+</body>
+</html>
