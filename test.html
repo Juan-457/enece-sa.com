@@ -174,12 +174,18 @@
       display: inline-block;
     }
     .instagram-story-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-    .story {
-      text-decoration: none; color: inherit; background: #fff; border-radius: 16px; padding: 12px; box-shadow: var(--shadow);
+    .instagram-post {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      padding: 8px;
     }
-    .story img { width: 100%; height: 170px; object-fit: cover; border-radius: 12px; }
-    .story h4 { margin: 10px 0 2px; }
-    .story p { margin: 0; color: #58717b; font-size: .9rem; }
+    .instagram-post .instagram-media {
+      min-width: 0 !important;
+      width: 100% !important;
+      margin: 0 !important;
+    }
 
     .map-embed { width: 100%; height: 320px; border: 0; border-radius: 16px; }
     .contact-form input, .contact-form textarea {
@@ -188,6 +194,15 @@
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .contact-form button { margin-top: 12px; border: 0; background: var(--cyan); color: #fff; padding: 12px 20px; border-radius: 999px; font-weight: 700; }
     footer { padding: 26px 0; text-align: center; color: #627981; }
+    .footer-content {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .footer-logo {
+      width: 22px;
+      height: auto;
+    }
 
     @media (max-width: 980px) {
       .split { grid-template-columns: 1fr; }
@@ -326,10 +341,18 @@
         </div>
         <h2 class="section-heading">Últimas publicaciones de @enece.agro</h2>
         <div class="instagram-story-grid">
-          <a class="story" href="https://www.instagram.com/p/DUtmcseiUxe/?hl=es" target="_blank" rel="noopener noreferrer"><img src="IMG_7256-1.jpeg" alt="Publicación de cultivo" /><h4>Publicación 1</h4><p>Ver publicación en Instagram.</p></a>
-          <a class="story" href="https://www.instagram.com/p/DUl6fU0CZSZ/?hl=es" target="_blank" rel="noopener noreferrer"><img src="IMG_4328-scaled-1-1.jpg" alt="Publicación de maquinaria" /><h4>Publicación 2</h4><p>Últimas novedades del campo.</p></a>
-          <a class="story" href="https://www.instagram.com/p/DScsT8GgGKM/?hl=es&img_index=1" target="_blank" rel="noopener noreferrer"><img src="IMG_8792-scaled-1-1.jpg" alt="Publicación de cosecha" /><h4>Publicación 3</h4><p>Producción y clasificación.</p></a>
-          <a class="story" href="https://www.instagram.com/p/DSS4_l9if0V/?hl=es" target="_blank" rel="noopener noreferrer"><img src="IMG_8140-scaled-1-1.jpg" alt="Publicación de perfil" /><h4>Publicación 4</h4><p>Abrir publicación completa en Instagram.</p></a>
+          <article class="instagram-post">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DUtmcseiUxe/" data-instgrm-version="14"></blockquote>
+          </article>
+          <article class="instagram-post">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DUl6fU0CZSZ/" data-instgrm-version="14"></blockquote>
+          </article>
+          <article class="instagram-post">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DScsT8GgGKM/" data-instgrm-version="14"></blockquote>
+          </article>
+          <article class="instagram-post">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DSS4_l9if0V/" data-instgrm-version="14"></blockquote>
+          </article>
         </div>
       </div>
     </section>
@@ -362,8 +385,12 @@
   </main>
 
   <footer>
-    <div class="container">Created - Umanoai - 2024</div>
+    <div class="container footer-content">
+      <span>Created - Umanoai - 2026</span>
+      <img src="umanoai.png" alt="UmanoAI" class="footer-logo" />
+    </div>
   </footer>
+  <script async src="https://www.instagram.com/embed.js"></script>
   <script>
     (() => {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
