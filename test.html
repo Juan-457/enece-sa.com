@@ -122,6 +122,26 @@
       font-size: clamp(1rem, 2.2vw, 1.4rem);
       box-shadow: var(--shadow);
     }
+    .banner-track {
+      min-height: 1.5em;
+      display: grid;
+      place-items: center;
+    }
+    .banner-typing {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+    .banner-typing::after {
+      content: "|";
+      animation: cursor-blink .8s steps(1) infinite;
+      opacity: .9;
+    }
+    @keyframes cursor-blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
 
     .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
     .gallery-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 12px; }
@@ -229,7 +249,7 @@
     </section>
 
     <section>
-      <div class="container banner">Explotación agrícola | Más de 60 años de experiencia</div>
+      <div class="container banner"><div class="banner-track" data-words="Explotación agrícola|Más de 60 años de experiencia"><span class="banner-typing" aria-live="polite">Explotación agrícola</span></div></div>
     </section>
 
     <section class="light" id="empresa">
@@ -299,5 +319,60 @@
   <footer>
     <div class="container">Created - Umanoai - 2024</div>
   </footer>
+  <script>
+    (() => {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const tracks = Array.from(document.querySelectorAll('.banner-track[data-words]'));
+      if (!tracks.length) return;
+
+      tracks.forEach((track) => {
+        const words = (track.dataset.words || '')
+          .split('|')
+          .map((word) => word.trim())
+          .filter(Boolean);
+
+        if (!words.length) return;
+
+        const target = track.querySelector('.banner-typing') || track;
+
+        if (prefersReducedMotion.matches) {
+          target.textContent = words[0];
+          return;
+        }
+
+        let wordIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
+
+        const type = () => {
+          if (!document.body.contains(track)) return;
+
+          const currentWord = words[wordIndex];
+
+          charIndex = deleting
+            ? Math.max(charIndex - 1, 0)
+            : Math.min(charIndex + 1, currentWord.length);
+
+          target.textContent = currentWord.slice(0, charIndex);
+
+          let delay = deleting ? 45 : 70;
+
+          if (!deleting && charIndex === currentWord.length) {
+            delay = 1600;
+            deleting = true;
+          } else if (deleting && charIndex === 0) {
+            deleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            delay = 500;
+          }
+
+          window.setTimeout(type, delay);
+        };
+
+        type();
+      });
+    })();
+  </script>
+
 </body>
 </html>
