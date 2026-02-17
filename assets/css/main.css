@@ -497,6 +497,37 @@ html:not(.js) [data-puzzle]::before {
   align-items: center;
 }
 
+#enece .two-column {
+  grid-template-columns: minmax(300px, 0.9fr) minmax(420px, 1.1fr);
+}
+
+.combined-text {
+  max-width: 640px;
+}
+
+.combined-text p {
+  margin: 0 0 16px;
+  line-height: 1.65;
+}
+
+.text-accent {
+  color: #00a4c8;
+  font-weight: 700;
+}
+
+.enece-video-wrap {
+  justify-self: end;
+  width: 100%;
+  max-width: 740px;
+}
+
+.enece-video {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
 .agri-gallery {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -819,6 +850,15 @@ footer {
 }
 
 @media (max-width: 768px) {
+  #enece .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .enece-video-wrap {
+    justify-self: stretch;
+    max-width: 100%;
+  }
+
   .site-shell {
     padding-top: 0;
   }
