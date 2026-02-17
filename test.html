@@ -163,6 +163,16 @@
     .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
     .gallery-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 12px; }
 
+    .instagram-header {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .instagram-logo {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+    }
     .instagram-story-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
     .story {
       text-decoration: none; color: inherit; background: #fff; border-radius: 16px; padding: 12px; box-shadow: var(--shadow);
@@ -297,9 +307,24 @@
 
     <section id="instagram">
       <div class="container">
-        <div class="section-title">Instagram</div>
+        <div class="section-title instagram-header">
+          <svg class="instagram-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="igGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#feda75"></stop>
+                <stop offset="35%" stop-color="#fa7e1e"></stop>
+                <stop offset="65%" stop-color="#d62976"></stop>
+                <stop offset="85%" stop-color="#962fbf"></stop>
+                <stop offset="100%" stop-color="#4f5bd5"></stop>
+              </linearGradient>
+            </defs>
+            <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#igGradient)"></rect>
+            <circle cx="12" cy="12" r="4.5" fill="none" stroke="#fff" stroke-width="2"></circle>
+            <circle cx="17.2" cy="6.8" r="1.2" fill="#fff"></circle>
+          </svg>
+          Instagram
+        </div>
         <h2 class="section-heading">Últimas publicaciones de @enece.agro</h2>
-        <p>Te compartimos accesos directos a las últimas publicaciones de Instagram que nos pasaste.</p>
         <div class="instagram-story-grid">
           <a class="story" href="https://www.instagram.com/p/DUtmcseiUxe/?hl=es" target="_blank" rel="noopener noreferrer"><img src="IMG_7256.jpeg" alt="Publicación de cultivo" /><h4>Publicación 1</h4><p>Ver publicación en Instagram.</p></a>
           <a class="story" href="https://www.instagram.com/p/DUl6fU0CZSZ/?hl=es" target="_blank" rel="noopener noreferrer"><img src="IMG_4328-scaled-1.jpg" alt="Publicación de maquinaria" /><h4>Publicación 2</h4><p>Últimas novedades del campo.</p></a>
