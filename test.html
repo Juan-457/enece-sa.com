@@ -28,12 +28,29 @@
     .container { width: min(1140px, 92%); margin: 0 auto; }
     .hero {
       min-height: 100vh;
-      background: linear-gradient(rgba(6, 20, 26, .58), rgba(6, 20, 26, .68)), url("ENECE-01-155-copia.jpg") center/cover no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       padding: 12px 0 34px;
       color: #fff;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(6, 20, 26, .58), rgba(6, 20, 26, .68));
+      z-index: -1;
     }
     .topbar {
       background: var(--cyan);
@@ -178,6 +195,9 @@
 </head>
 <body>
   <header class="hero" id="inicio">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="Tractor.mp4" type="video/mp4" />
+    </video>
     <div class="container topbar">
       <a href="#" class="logo"><img src="logovioleta.png" alt="ENECE" /> ENECE</a>
       <nav>
@@ -217,7 +237,7 @@
           <h2 class="section-heading">Experiencia en cultivo y comercialización de papa</h2>
           <p>Desde los comienzos nos dedicamos a la producción, industrialización y exportación de diversas variedades de papas. También producimos papa-semilla para autoabastecimiento y para proveer a terceros.</p>
         </div>
-        <img src="DSC_5528.jpg" alt="Cosecha de papas" style="width:100%;border-radius:20px;box-shadow:var(--shadow);" />
+        <img src="ENECE-01-188.jpg" alt="Casco de la estancia" style="width:100%;border-radius:20px;box-shadow:var(--shadow);" />
       </div>
     </section>
 
