@@ -773,8 +773,25 @@ button:active {
 footer {
   padding: 24px 0;
   text-align: center;
-  background: #f0f0f0;
-  color: var(--muted);
+  background: rgba(35, 96, 190, 0.3);
+  color: #f5f9ff;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.footer-logo-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 22px;
+  height: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {

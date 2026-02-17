@@ -193,11 +193,16 @@
     }
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .contact-form button { margin-top: 12px; border: 0; background: var(--cyan); color: #fff; padding: 12px 20px; border-radius: 999px; font-weight: 700; }
-    footer { padding: 26px 0; text-align: center; color: #627981; }
+    footer { padding: 26px 0; text-align: center; background: rgba(35, 96, 190, 0.3); color: #f5f9ff; }
     .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .footer-logo-link {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
     }
     .footer-logo {
       width: 22px;
@@ -387,7 +392,9 @@
   <footer>
     <div class="container footer-content">
       <span>Created - Umanoai - 2026</span>
-      <img src="umanoai.png" alt="UmanoAI" class="footer-logo" />
+      <a class="footer-logo-link" href="https://umanoai.com.ar" target="_blank" rel="noopener noreferrer" aria-label="UmanoAI">
+        <img src="umanoai.png" alt="UmanoAI" class="footer-logo" />
+      </a>
     </div>
   </footer>
   <script async src="https://www.instagram.com/embed.js"></script>
