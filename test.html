@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ENECE S.A. | Concepto Aerial</title>
+  <title>ENECE S.A. | Productores de Papa</title>
   <link rel="icon" href="favicon.ico" sizes="any" />
   <style>
     :root {
@@ -110,6 +110,25 @@
     .section-heading { font-size: clamp(1.7rem, 3.4vw, 2.8rem); line-height: 1.1; margin: 8px 0 18px; }
 
     .split { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; }
+    .story-media {
+      display: grid;
+      gap: 14px;
+      justify-items: center;
+    }
+    .story-media video {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+    .story-bubble {
+      background: #ffffff;
+      color: var(--cyan-strong);
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(6, 20, 28, 0.18);
+      text-align: center;
+    }
     .card {
       background: var(--card);
       border-radius: var(--radius);
@@ -127,6 +146,20 @@
       margin: 0;
       font-size: 1.05rem;
       color: #1d313a;
+    }
+    .sustainability-layout {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 24px;
+      align-items: center;
+    }
+    .sustainability-image {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      display: block;
+      object-fit: cover;
+      max-height: 260px;
     }
     .text-accent {
       color: var(--cyan-strong);
@@ -222,6 +255,7 @@
 
     @media (max-width: 980px) {
       .split { grid-template-columns: 1fr; }
+      .sustainability-layout { grid-template-columns: 1fr; }
       .hero-stats { border-radius: 26px; grid-template-columns: 1fr 1fr; }
       .products-grid { grid-template-columns: repeat(2, 1fr); }
       .instagram-story-grid { grid-template-columns: repeat(2, 1fr); }
@@ -278,19 +312,25 @@
           <h2 class="section-heading">Experiencia en cultivo y comercialización de papa</h2>
           <p>Desde los comienzos nos dedicamos a la producción, industrialización y exportación de diversas variedades de papas. También producimos papa-semilla para autoabastecimiento y para proveer a terceros.</p>
         </div>
-        <video autoplay muted loop playsinline style="width:100%;border-radius:20px;box-shadow:var(--shadow);">
-          <source src="casco.mp4" type="video/mp4" />
-          Tu navegador no soporta el video del casco de la estancia.
-        </video>
+        <div class="story-media">
+          <video autoplay muted loop playsinline>
+            <source src="casco.mp4" type="video/mp4" />
+            Tu navegador no soporta el video del casco de la estancia.
+          </video>
+          <div class="story-bubble">Un casco con historia</div>
+        </div>
       </div>
     </section>
 
     <section class="light">
       <div class="container">
-        <div class="combined-text">
-          <p><span class="text-accent">Nuestra prioridad, cuidar nuestro medio ambiente</span>. <span class="text-accent">Nuestros productos</span> nacen de ese compromiso.</p>
-          <p><strong>ENECE S.A.</strong> es continuidad de una empresa familiar dedicada a la producción de papa y a la mejora constante en procesos agrícolas.</p>
-          <p>Seguimos creciendo, aprendiendo y superándonos para entregar productos de calidad para cada cliente.</p>
+        <div class="sustainability-layout">
+          <div class="combined-text">
+            <p><span class="text-accent">Nuestra prioridad, cuidar nuestro medio ambiente</span>. <span class="text-accent">Nuestros productos</span> nacen de ese compromiso.</p>
+            <p><strong>ENECE S.A.</strong> es continuidad de una empresa familiar dedicada a la producción de papa y a la mejora constante en procesos agrícolas.</p>
+            <p>Seguimos creciendo, aprendiendo y superándonos para entregar productos de calidad para cada cliente.</p>
+          </div>
+          <img class="sustainability-image" src="DSC_5528.jpg" alt="Planta de papa en cultivo" />
         </div>
       </div>
     </section>
