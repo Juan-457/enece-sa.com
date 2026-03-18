@@ -769,6 +769,12 @@ body.lightbox-open {
   width: 100%;
 }
 
+.instagram-cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
+}
+
 .map-embed {
   width: 100%;
   border: 0;
@@ -809,6 +815,23 @@ body.lightbox-open {
 .action-button-facebook:hover,
 .action-button-facebook:focus-visible {
   background: #1464cc;
+}
+
+.action-button-instagram {
+  gap: 10px;
+  background: linear-gradient(135deg, #feda75 0%, #fa7e1e 22%, #d62976 52%, #962fbf 78%, #4f5bd5 100%);
+  box-shadow: 0 10px 24px rgba(214, 41, 118, 0.28);
+}
+
+.action-button-instagram:hover,
+.action-button-instagram:focus-visible {
+  background: linear-gradient(135deg, #feda75 0%, #f77737 22%, #e1306c 52%, #c13584 78%, #5851db 100%);
+}
+
+.action-button-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .form-grid {
