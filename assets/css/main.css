@@ -757,6 +757,18 @@ body.lightbox-open {
   }
 }
 
+.instagram-feed-shell {
+  padding: 24px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.instagram-feed-shell rssapp-carousel {
+  display: block;
+  width: 100%;
+}
+
 .map-embed {
   width: 100%;
   border: 0;
