@@ -776,6 +776,41 @@ body.lightbox-open {
   min-height: 360px;
 }
 
+
+.location-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 28px 0 24px;
+}
+
+.action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: var(--green);
+  color: #fff;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.action-button:hover,
+.action-button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+.action-button-facebook {
+  background: #1877f2;
+}
+
+.action-button-facebook:hover,
+.action-button-facebook:focus-visible {
+  background: #1464cc;
+}
+
 .form-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -862,6 +897,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .location-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   #enece .two-column {
     grid-template-columns: 1fr;
   }
