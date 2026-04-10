@@ -348,6 +348,73 @@ const setupSmoothScroll = () => {
   });
 };
 
+const setupActiveSectionNav = () => {
+  const navSectionLinks = Array.from(document.querySelectorAll('.nav-menu a[href^="#"]:not([href="#"])'));
+  if (!navSectionLinks.length) return;
+
+  const setActiveByHref = (href) => {
+    navSectionLinks.forEach((link) => {
+      const item = link.closest("li");
+      if (!item) return;
+      item.classList.toggle("active", link.getAttribute("href") === href);
+    });
+  };
+
+  const observedSections = navSectionLinks
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+
+  if (!observedSections.length) return;
+
+  navSectionLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      const href = link.getAttribute("href");
+      if (href) setActiveByHref(href);
+    });
+  });
+
+  const headerOffset = header ? header.offsetHeight : 0;
+
+  if (typeof IntersectionObserver === "undefined") {
+    window.addEventListener(
+      "scroll",
+      () => {
+        const scrollPosition = window.scrollY + headerOffset + 20;
+        let currentSection = observedSections[0];
+
+        observedSections.forEach((section) => {
+          if (section.offsetTop <= scrollPosition) {
+            currentSection = section;
+          }
+        });
+
+        if (currentSection?.id) setActiveByHref(`#${currentSection.id}`);
+      },
+      { passive: true }
+    );
+    return;
+  }
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      const visibleEntries = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+      if (!visibleEntries.length) return;
+
+      const currentId = visibleEntries[0].target.id;
+      if (currentId) setActiveByHref(`#${currentId}`);
+    },
+    {
+      rootMargin: `-${headerOffset + 20}px 0px -55% 0px`,
+      threshold: [0.2, 0.4, 0.6],
+    }
+  );
+
+  observedSections.forEach((section) => sectionObserver.observe(section));
+};
+
 // Banner typing
 const setupBannerTyping = () => {
   const tracks = Array.from(document.querySelectorAll(".banner-track[data-words]"));
@@ -544,6 +611,7 @@ const onScroll = () => {
 setupPuzzle();
 setupReveal();
 setupSmoothScroll();
+setupActiveSectionNav();
 setupBannerTyping();
 setupGalleryLightbox();
 initContactForms();
