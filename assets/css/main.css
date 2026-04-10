@@ -466,6 +466,10 @@ html:not(.js) [data-puzzle]::before {
   padding: 72px 0;
 }
 
+.section[id] {
+  scroll-margin-top: 120px;
+}
+
 .section.light {
   background: var(--light-bg);
 }
@@ -670,7 +674,7 @@ body.lightbox-open {
 }
 
 .products-grid {
-  margin-top: -140px;
+  margin-top: -72px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
@@ -920,6 +924,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .section[id] {
+    scroll-margin-top: 24px;
+  }
+
   .location-actions {
     flex-direction: column;
     align-items: stretch;
