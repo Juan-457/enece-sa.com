@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://enece-sa.com/sitemap.xml
