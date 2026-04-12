@@ -1,0 +1,37 @@
+# ENECE S.A. — Producción y Comercialización de Papa
+
+Sitio oficial de ENECE S.A., empresa argentina productora y exportadora de papa.
+
+## Sitio principal
+- https://enece-sa.com/
+
+## Páginas
+- Inicio (español): https://enece-sa.com/
+- Inicio (inglés): https://enece-sa.com/enece-ingles.html
+- Inicio (portugués): https://enece-sa.com/enece-portuguese.html
+
+## Descripción breve
+ENECE S.A. es la continuidad de una empresa familiar con más de 60 años de experiencia en el cultivo y comercialización de papas. Fundada formalmente en 2015, se dedica a la producción, procesamiento y exportación de diversas variedades de papa, incluyendo papa-semilla para autoabastecimiento y provisión a terceros.
+
+## Actividades
+- Producción de papa de consumo
+- Producción de papa-semilla
+- Procesamiento de papa
+- Exportación de papa a mercados internacionales
+- Comercialización mayorista
+
+## Sector
+- Agroindustria
+- Producción hortícola
+- Exportación agropecuaria
+
+## Idiomas disponibles
+- Español (es-AR)
+- Inglés (en)
+- Portugués (pt)
+
+## Ubicación
+- Argentina
+
+## Actualización
+- Consultar sitemap.xml para URLs canónicas y fecha de última modificación.
