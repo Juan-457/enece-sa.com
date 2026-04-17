@@ -65,7 +65,7 @@ img {
   left: 0;
   right: 0;
   top: 0;
-  background: linear-gradient(180deg, rgba(12, 28, 52, 0.96) 0%, rgba(15, 34, 62, 0.92) 100%);
+  background: var(--purple);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   z-index: 100;
@@ -965,7 +965,7 @@ footer {
 
   .site-header {
     position: static;
-    background: #111;
+    background: var(--purple);
   }
 
   .site-header nav {
