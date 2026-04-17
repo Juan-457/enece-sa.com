@@ -193,7 +193,7 @@ img {
 
 .nav-menu a:hover span,
 .nav-menu a:focus-visible span {
-  color: var(--purple);
+  color: #f6ecff;
   text-decoration: underline;
   text-decoration-color: #fff;
   text-decoration-thickness: 2px;
