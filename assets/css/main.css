@@ -84,12 +84,17 @@ img {
 .logo {
   display: inline-flex;
   align-items: center;
-  padding-right: 28px;
+  justify-content: center;
+  min-height: 64px;
+  padding: 8px 28px 8px 10px;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .logo img {
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.45));
+  width: clamp(160px, 14vw, 210px);
+  height: auto;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.28)) contrast(1.08) brightness(1.05);
+  transform: translateZ(0);
 }
 
 .site-header nav {
