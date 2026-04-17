@@ -92,7 +92,7 @@ img {
 
 .logo img {
   width: auto;
-  height: clamp(30px, 3vw, 40px);
+  height: clamp(39px, 3.9vw, 52px);
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.28)) contrast(1.08) brightness(1.05);
   transform: translateZ(0);
 }
