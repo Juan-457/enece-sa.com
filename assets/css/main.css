@@ -77,7 +77,7 @@ img {
   justify-content: space-between;
   width: 100%;
   max-width: none;
-  padding: 9px clamp(20px, 4vw, 56px);
+  padding: 5px clamp(20px, 4vw, 56px);
   gap: 24px;
 }
 
@@ -85,14 +85,16 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 32px;
-  padding: 4px 28px 4px 10px;
+  height: clamp(58px, 5vw, 74px);
+  padding: 2px 28px 2px 10px;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .logo img {
   width: auto;
-  height: clamp(39px, 3.9vw, 52px);
+  height: 100%;
+  max-height: 100%;
+  object-fit: contain;
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.28)) contrast(1.08) brightness(1.05);
   transform: translateZ(0);
 }
