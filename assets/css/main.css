@@ -97,7 +97,7 @@ img {
   height: 76%;
   max-height: 100%;
   object-fit: contain;
-  transform: scale(1.7) translateZ(0);
+  transform: scale(2.55) translateZ(0);
   transform-origin: left center;
   filter: drop-shadow(0 3px 7px rgba(0, 0, 0, 0.3)) contrast(1.2) brightness(1.22);
 }
@@ -978,7 +978,7 @@ footer {
   }
 
   .logo img {
-    transform: scale(1.7) translateZ(0);
+    transform: scale(2.55) translateZ(0);
   }
 
   .site-header {
