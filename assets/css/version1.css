@@ -44,7 +44,8 @@ button {
 }
 
 .footer-powered-by {
-  padding: 6px 10px;
+  padding: 4px 8px;
+  gap: 8px;
 }
 
 .footer-powered-by span {
@@ -52,5 +53,5 @@ button {
 }
 
 .footer-umano-logo {
-  width: 72px;
+  width: 60px;
 }
