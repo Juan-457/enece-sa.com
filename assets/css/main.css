@@ -889,27 +889,77 @@ button:active {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
-footer {
-  padding: 24px 0;
-  text-align: center;
-  background: rgba(35, 96, 190, 0.3);
+.site-footer {
+  padding: 26px 0;
+  background: var(--purple);
   color: #f5f9ff;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.footer-content {
+.site-footer .footer-content {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-brand {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
+  gap: 14px;
 }
 
-.footer-logo-link {
+.footer-enece-logo {
+  width: 120px;
+  height: auto;
+}
+
+.footer-brand p {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+.footer-links a {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footer-powered-by {
+  justify-self: end;
   display: inline-flex;
   align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
 }
 
-.footer-logo {
-  width: 22px;
+.footer-powered-by span {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.footer-umano-logo {
+  width: 84px;
   height: auto;
 }
 
@@ -945,6 +995,21 @@ footer {
   .location-actions {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .site-footer .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .footer-brand {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-powered-by {
+    justify-self: center;
   }
 
   #enece .two-column {
