@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/version1.css" />
 </head>
 <body>
   <div class="site-shell">
@@ -60,34 +60,21 @@
     </header>
 
     <section class="hero">
-      <!-- Puzzle reveal: data-puzzle uses data-image (or nested <img>) -->
       <div
         class="hero-slide"
-        data-puzzle
-        data-image="ENECE-01-155-copia.jpg"
-        data-cols="8"
-        data-rows="5"
-        style="--puzzle-image: url('ENECE-01-155-copia.jpg');"
+        style="background-image: url('ENECE-01-155-copia.jpg');"
       >
         <div class="hero-content">PRODUCTORES<br />DE PAPA</div>
       </div>
       <div
         class="hero-slide"
-        data-puzzle
-        data-image="ENECE-01-160-2-scaled-1.jpg"
-        data-cols="8"
-        data-rows="5"
-        style="--puzzle-image: url('ENECE-01-160-2-scaled-1.jpg'); --hero-zoom: 1; --hero-zoom-shift: 0%;"
+        style="background-image: url('ENECE-01-160-2-scaled-1.jpg');"
       >
         <div class="hero-content">CULTIVO Y<br />COMERCIALIZACIÓN</div>
       </div>
       <div
         class="hero-slide"
-        data-puzzle
-        data-image="ENECE-01-188.jpg"
-        data-cols="8"
-        data-rows="5"
-        style="--puzzle-image: url('ENECE-01-188.jpg');"
+        style="background-image: url('ENECE-01-188.jpg');"
       >
         <div class="hero-content">UN CASCO<br />CON HISTORIA</div>
       </div>
@@ -318,8 +305,23 @@
       </div>
     </section>
 
-    <footer>
-      <div class="container">Created - JwGroup - 2024</div>
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <img class="footer-enece-logo" src="logoblanco.png" alt="ENECE logo" />
+          <p>ENECE S.A. · Productores de papa en Argentina.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#empresa">Empresa</a>
+          <a href="#productos">Productos</a>
+          <a href="#ubi">Ubicación</a>
+          <a href="https://www.instagram.com/enece.agro/" target="_blank" rel="noreferrer">Instagram</a>
+        </div>
+        <a class="footer-powered-by" href="https://umanoai.com.ar/" target="_blank" rel="noreferrer" aria-label="Desarrollado por UmanoAI">
+          <span>Desarrollado por</span>
+          <img class="footer-umano-logo" src="umanoai.png" alt="UmanoAI logo" />
+        </a>
+      </div>
     </footer>
   </div>
 
