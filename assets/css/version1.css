@@ -28,7 +28,7 @@ button {
 }
 
 .footer-enece-logo {
-  width: 96px;
+  width: 150px;
 }
 
 .footer-brand p {
@@ -44,14 +44,14 @@ button {
 }
 
 .footer-powered-by {
-  padding: 4px 8px;
-  gap: 8px;
+  padding: 2px 6px;
+  gap: 4px;
 }
 
 .footer-powered-by span {
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .footer-umano-logo {
-  width: 60px;
+  width: 36px;
 }

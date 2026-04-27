@@ -910,7 +910,7 @@ button:active {
 }
 
 .footer-enece-logo {
-  width: 120px;
+  width: 170px;
   height: auto;
 }
 
@@ -946,21 +946,21 @@ button:active {
   justify-self: end;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 12px;
+  gap: 6px;
+  padding: 4px 8px;
   border: 1px solid rgba(255, 255, 255, 0.32);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.06);
 }
 
 .footer-powered-by span {
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.4px;
 }
 
 .footer-umano-logo {
-  width: 84px;
+  width: 48px;
   height: auto;
 }
 
