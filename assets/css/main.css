@@ -267,7 +267,7 @@ img {
   place-items: center;
   text-align: center;
   background-size: cover;
-  background-position: center calc(50% + var(--parallax-offset, 0px));
+  background-position: var(--hero-bg-position, center calc(50% + var(--parallax-offset, 0px)));
   padding: 100px 20px;
   position: relative;
 }
