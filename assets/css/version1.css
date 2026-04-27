@@ -16,3 +16,41 @@ button {
 .banner-typing::after {
   background: var(--green-soft-text);
 }
+
+/* Version 1 footer tweaks */
+.site-footer {
+  background: var(--purple);
+  padding: 14px 0;
+}
+
+.site-footer .footer-content {
+  gap: 12px;
+}
+
+.footer-enece-logo {
+  width: 96px;
+}
+
+.footer-brand p {
+  font-size: 12px;
+}
+
+.footer-links {
+  gap: 10px;
+}
+
+.footer-links a {
+  font-size: 11px;
+}
+
+.footer-powered-by {
+  padding: 6px 10px;
+}
+
+.footer-powered-by span {
+  font-size: 10px;
+}
+
+.footer-umano-logo {
+  width: 72px;
+}
