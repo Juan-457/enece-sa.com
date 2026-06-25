@@ -5,25 +5,32 @@
   --green: #556b42;
   --green-soft-text: #c5ceba;
   --nav-active-gray: #e4e6ec;
+  --dark-gray: #2e3338;
 }
 
 .highlight-box {
-  background: var(--nav-active-gray);
-  color: #222;
+  background: var(--dark-gray);
+  color: #fff;
 }
 
 .highlight-box img {
-  filter: invert(1) opacity(0.75);
+  /* iconos blancos sobre gris oscuro: el SVG ya es blanco, no se invierte */
+  filter: none;
+  opacity: 0.92;
 }
 
-.banner,
+.banner {
+  background: var(--dark-gray);
+  color: #fff;
+}
+
 .action-button:not(.action-button-facebook):not(.action-button-instagram),
 button {
   color: var(--green-soft-text);
 }
 
 .banner-typing::after {
-  background: var(--green-soft-text);
+  background: #fff;
 }
 
 /* Version 1 footer tweaks */
