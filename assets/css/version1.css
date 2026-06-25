@@ -4,9 +4,18 @@
   --purple: #766da7;
   --green: #556b42;
   --green-soft-text: #c5ceba;
+  --nav-active-gray: #f4f5fa;
 }
 
-.highlight-box,
+.highlight-box {
+  background: var(--nav-active-gray);
+  color: #222;
+}
+
+.highlight-box img {
+  filter: invert(1) opacity(0.75);
+}
+
 .banner,
 .action-button:not(.action-button-facebook):not(.action-button-instagram),
 button {
