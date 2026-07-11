@@ -148,6 +148,42 @@ html {
   width: 100%;
 }
 
+/* --- Sección con foto de fondo lavada (texto oscuro encima) --- */
+
+.section.story-photo-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  isolation: isolate;
+}
+
+.section.story-photo-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(245, 240, 233, 0.82);
+  z-index: 0;
+}
+
+.section.story-photo-bg > .container {
+  position: relative;
+  z-index: 1;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .section.story-photo-bg {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  .section.story-photo-bg {
+    background-attachment: scroll;
+  }
+}
+
 /* --- Bandas full-bleed con parallax --- */
 
 .parallax-band {
