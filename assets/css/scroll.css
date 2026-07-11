@@ -255,24 +255,26 @@ html {
 
 .band-bubbles {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 .band-bubbles .band-kicker,
-.band-bubbles .band-title {
-  display: inline-block;
-  background: rgba(123, 70, 150, 0.82);
+.band-bubbles .band-title,
+.band-bubbles .story-cta {
+  display: inline-flex;
+  background: rgba(74, 38, 94, 0.92);
   border: 1px solid rgba(255, 255, 255, 0.22);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 @supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
   .band-bubbles .band-kicker,
-  .band-bubbles .band-title {
-    background: rgba(123, 70, 150, 0.68);
+  .band-bubbles .band-title,
+  .band-bubbles .story-cta {
+    background: rgba(74, 38, 94, 0.82);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
   }
@@ -293,6 +295,12 @@ html {
 
 .band-bubbles .story-cta {
   margin-top: 0;
+}
+
+.band-bubbles .story-cta:hover,
+.band-bubbles .story-cta:focus-visible {
+  background: var(--purple);
+  color: #fff;
 }
 
 /* --- Banda de video full-screen (medio ambiente) --- */
