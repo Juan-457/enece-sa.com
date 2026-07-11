@@ -251,6 +251,36 @@ html {
   text-shadow: 0 6px 22px rgba(0, 0, 0, 0.55);
 }
 
+/* --- Burbujas glass violeta para textos sobre fondos oscuros --- */
+
+.band-bubbles .band-kicker,
+.band-bubbles .band-title {
+  display: inline-block;
+  background: rgba(123, 70, 150, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  .band-bubbles .band-kicker,
+  .band-bubbles .band-title {
+    background: rgba(123, 70, 150, 0.38);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.band-bubbles .band-kicker {
+  padding: 8px 22px;
+  border-radius: 999px;
+}
+
+.band-bubbles .band-title {
+  padding: 18px 36px;
+  border-radius: 26px;
+  text-shadow: none;
+}
+
 /* --- Banda de video full-screen (medio ambiente) --- */
 
 .video-band {
