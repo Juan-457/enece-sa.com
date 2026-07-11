@@ -1,0 +1,269 @@
+/* ------------------------------------------------------------
+   Scroll storytelling — capa sobre version1.css
+   Hero full-viewport + secciones narrativas centradas +
+   bandas full-bleed con parallax (referencia del cliente).
+   No toca: navbar, productos, instagram, ubicación, footer.
+------------------------------------------------------------ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* --- Hero a pantalla completa --- */
+
+.hero {
+  height: auto;
+  min-height: calc(100vh - 46px);
+  min-height: calc(100svh - 46px);
+}
+
+.hero-scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 26px;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.18);
+  animation: scroll-cue-bounce 2.2s ease-in-out infinite;
+}
+
+.hero-scroll-cue svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hero-scroll-cue:hover,
+.hero-scroll-cue:focus-visible {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+@keyframes scroll-cue-bounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-cue {
+    animation: none;
+  }
+}
+
+/* --- Secciones narrativas centradas a pantalla (casi) completa --- */
+
+.story-section {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  min-height: calc(88vh - 46px);
+  min-height: calc(88svh - 46px);
+  padding: 96px 0;
+}
+
+.story-content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.story-content .section-separator,
+.story-stack .section-separator {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.story-content p,
+.story-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 66ch;
+  margin: 0 auto 18px;
+}
+
+.story-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+  padding: 12px 32px;
+  border-radius: 999px;
+  border: 2px solid var(--green);
+  color: var(--green);
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.story-cta:hover,
+.story-cta:focus-visible {
+  background: var(--green);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.story-cta.on-dark {
+  border-color: #fff;
+  color: #fff;
+}
+
+.story-cta.on-dark:hover,
+.story-cta.on-dark:focus-visible {
+  background: #fff;
+  color: var(--text);
+}
+
+/* --- Empresa: texto centrado + galería debajo --- */
+
+.story-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+  text-align: center;
+}
+
+.story-stack .agri-gallery {
+  max-width: 920px;
+  width: 100%;
+}
+
+/* --- Bandas full-bleed con parallax --- */
+
+.parallax-band {
+  position: relative;
+  min-height: 68vh;
+  min-height: 68svh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+  /* background-image llega inline desde el HTML (url relativa al documento) */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  isolation: isolate;
+}
+
+.parallax-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.32);
+  z-index: 0;
+}
+
+.parallax-band:empty::before {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+/* fixed backgrounds son inestables en iOS y pantallas chicas */
+@supports (-webkit-touch-callout: none) {
+  .parallax-band {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  .parallax-band {
+    background-attachment: scroll;
+    min-height: 52svh;
+  }
+}
+
+.band-content {
+  position: relative;
+  z-index: 1;
+  padding: 48px 20px;
+}
+
+.band-kicker {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 12px;
+}
+
+.band-title {
+  margin: 0 0 20px;
+  font-size: clamp(1.7rem, 4vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.2;
+  text-shadow: 0 6px 22px rgba(0, 0, 0, 0.55);
+}
+
+/* --- Banda de video full-screen (medio ambiente) --- */
+
+.video-band {
+  position: relative;
+  overflow: hidden;
+  min-height: 88vh;
+  min-height: 88svh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+  isolation: isolate;
+}
+
+.video-band video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.video-band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.34);
+  z-index: 0;
+}
+
+.video-band .band-content {
+  z-index: 1;
+}
+
+/* --- Ajustes mobile --- */
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 86svh;
+  }
+
+  .story-section {
+    min-height: 0;
+    padding: 72px 0;
+  }
+
+  .video-band {
+    min-height: 62svh;
+  }
+}

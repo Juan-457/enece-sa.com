@@ -17,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="preload" as="image" href="ENECE-01-155-copia.jpg" fetchpriority="high" />
   <link rel="stylesheet" href="assets/css/version1.css" />
+  <link rel="stylesheet" href="assets/css/scroll.css" />
 </head>
 <body>
   <div class="site-shell">
@@ -81,47 +82,35 @@
       </div>
       <button class="hero-arrow hero-arrow-prev" type="button" aria-label="Imagen anterior">‹</button>
       <button class="hero-arrow hero-arrow-next" type="button" aria-label="Imagen siguiente">›</button>
+      <a class="hero-scroll-cue" href="#enece" aria-label="Deslizá hacia abajo">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7" /></svg>
+      </a>
     </section>
 
-    <section class="section" id="enece">
-      <div class="container two-column reveal">
-        <div>
-          <div class="section-title">Bienvenidos a ENECE</div>
-          <h2 class="section-heading">Experiencia en cultivo y<br />comercialización de papa</h2>
-          <img class="section-separator" src="separador200x46.png" alt="Separador" />
-        </div>
-        <div>
-          <p>
-            Desde los comienzos nos dedicamos a la producción, procesamiento y exportación de
-            diversas variedades de papas. También producimos papa-semilla para autoabastecimiento y
-            para proveer a terceros.
-          </p>
-        </div>
+    <section class="section story-section" id="enece">
+      <div class="container story-content reveal">
+        <div class="section-title">Bienvenidos a ENECE</div>
+        <h2 class="section-heading">Experiencia en cultivo y<br />comercialización de papa</h2>
+        <img class="section-separator" src="separador200x46.png" alt="Separador" />
+        <p>
+          Desde los comienzos nos dedicamos a la producción, procesamiento y exportación de
+          diversas variedades de papas. También producimos papa-semilla para autoabastecimiento y
+          para proveer a terceros.
+        </p>
+        <a class="story-cta" href="#empresa">Conocé más</a>
       </div>
     </section>
 
-    <section class="section light">
-      <div class="container two-column">
-        <div>
-          <div class="highlight-box reveal">
-            <div>
-              <img src="assets/images/icon-sprout.svg" alt="Sprout" width="64" height="64" />
-            </div>
-            <h3>Nuestra prioridad, cuidar nuestro medio ambiente</h3>
-          </div>
-          <div class="highlight-box reveal" data-delay="120">
-            <div>
-              <img src="assets/images/icon-tulip.svg" alt="Tulip" width="64" height="64" />
-            </div>
-            <h3>Nuestros productos</h3>
-          </div>
-        </div>
-        <div class="reveal" data-delay="200">
-          <video autoplay muted loop playsinline poster="dron-poster.jpg">
-            <source src="dron.mp4" type="video/mp4" />
-            Tu navegador no soporta el video.
-          </video>
-        </div>
+    <div class="parallax-band" style="background-image: url('band-plantines.jpg');" role="img" aria-label="Plantas de papa creciendo en el campo"></div>
+
+    <section class="video-band" aria-label="Medio ambiente">
+      <video autoplay muted loop playsinline poster="dron-poster.jpg">
+        <source src="dron.mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
+      <div class="band-content reveal">
+        <div class="band-kicker">Medio ambiente</div>
+        <h2 class="band-title">Nuestra prioridad,<br />cuidar nuestro medio ambiente</h2>
       </div>
     </section>
 
@@ -131,9 +120,10 @@
       </div>
     </section>
 
-    <section class="section light" id="empresa">
-      <div class="container two-column">
-        <div>
+    <section class="section light story-section" id="empresa">
+      <div class="container story-stack">
+        <div class="story-text reveal">
+          <div class="section-title">Empresa</div>
           <h2 class="section-heading">Una mejor<br />agricultura</h2>
           <img class="section-separator" src="separador200x46.png" alt="Separador" />
           <p>
@@ -157,7 +147,7 @@
             creciendo, aprendiendo y superándose.
           </p>
         </div>
-        <div class="agri-gallery">
+        <div class="agri-gallery reveal">
           <button class="gallery-item" type="button" data-gallery-image="1.webp" data-gallery-alt="Imagen 1">
             <img src="1.webp" alt="Imagen 1" loading="lazy" />
           </button>
@@ -193,6 +183,14 @@
           <button class="gallery-lightbox-close" type="button" aria-label="Cerrar imagen" data-lightbox-close>×</button>
           <img class="gallery-lightbox-image" src="" alt="" />
         </div>
+      </div>
+    </section>
+
+    <section class="parallax-band" style="background-image: url('band-productos.jpg');" aria-label="Nuestros productos">
+      <div class="band-content reveal">
+        <div class="band-kicker">Productos</div>
+        <h2 class="band-title">Nuestras variedades</h2>
+        <a class="story-cta on-dark" href="#productos">Ver variedades</a>
       </div>
     </section>
 
