@@ -125,6 +125,21 @@
       border-radius: 20px;
       box-shadow: var(--shadow);
     }
+    .video-band {
+      position: relative;
+      overflow: hidden;
+      min-height: 70vh;
+      min-height: 70svh;
+      padding: 0;
+      isolation: isolate;
+    }
+    .video-band video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
     .story-bubble {
       background: #ffffff;
       color: var(--cyan-strong);
@@ -311,20 +326,20 @@
 
   <main>
     <section id="enece">
-      <div class="container split">
+      <div class="container">
         <div>
           <div class="section-title">Bienvenidos a ENECE</div>
           <h2 class="section-heading">Experiencia en cultivo y comercialización de papa</h2>
           <p>Desde los comienzos nos dedicamos a la producción, industrialización y exportación de diversas variedades de papas. También producimos papa-semilla para autoabastecimiento y para proveer a terceros.</p>
         </div>
-        <div class="story-media">
-          <video autoplay muted loop playsinline>
-            <source src="casco.mp4" type="video/mp4" />
-            Tu navegador no soporta el video del casco de la estancia.
-          </video>
-          <div class="story-bubble">Un casco con historia</div>
-        </div>
       </div>
+    </section>
+
+    <section class="video-band" aria-label="ENECE desde el aire">
+      <video autoplay muted loop playsinline poster="dron-poster.jpg">
+        <source src="dron.mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
     </section>
 
     <section class="light">
