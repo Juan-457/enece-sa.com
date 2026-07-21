@@ -61,27 +61,19 @@
       </div>
     </header>
 
-    <section class="hero">
-      <div
-        class="hero-slide"
-        style="background-image: url('ENECE-01-155-copia.jpg'); --hero-bg-position: center 70%;"
+    <section class="hero hero-has-video">
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="NewHero-poster.jpg"
+        aria-hidden="true"
       >
-        <div class="hero-content">PRODUCTORES<br />DE PAPA</div>
-      </div>
-      <div
-        class="hero-slide"
-        style="background-image: url('ENECE-01-160-2-scaled-1.jpg');"
-      >
-        <div class="hero-content">CULTIVO Y<br />COMERCIALIZACIÓN</div>
-      </div>
-      <div
-        class="hero-slide"
-        style="background-image: url('ENECE-01-188.jpg');"
-      >
-        <div class="hero-content">UN CASCO<br />CON HISTORIA</div>
-      </div>
-      <button class="hero-arrow hero-arrow-prev" type="button" aria-label="Imagen anterior">‹</button>
-      <button class="hero-arrow hero-arrow-next" type="button" aria-label="Imagen siguiente">›</button>
+        <source src="NewHero.mp4" type="video/mp4" />
+      </video>
       <a class="hero-scroll-cue" href="#enece" aria-label="Deslizá hacia abajo">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7" /></svg>
       </a>
