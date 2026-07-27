@@ -255,6 +255,7 @@ html {
   /* mismo violeta que la barra de navegación */
   color: var(--purple);
   font-weight: 800;
+  font-size: 1.12em;
 }
 
 /* --- Burbujas glass violeta para textos sobre fondos oscuros --- */
