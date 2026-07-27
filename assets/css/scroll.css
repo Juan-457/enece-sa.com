@@ -252,7 +252,43 @@ html {
 }
 
 .band-highlight {
+  /* mismo violeta que la barra de navegación */
+  color: var(--purple);
+  font-weight: 800;
+  font-size: 1.12em;
+}
+
+/* --- Burbujas violeta por frase, banda de video --- */
+
+.video-band .band-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-shadow: none;
+}
+
+.band-pill {
+  display: inline-block;
+  background: #f3f1fa;
+  color: #221f2b;
+  padding: 14px 30px;
+  border-radius: 999px;
+  border: 1px solid rgba(118, 109, 167, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   text-transform: uppercase;
+}
+
+.band-pill .band-highlight {
+  /* mismo violeta que la barra de navegación */
+  color: var(--purple);
+}
+
+@media (max-width: 640px) {
+  .band-pill {
+    padding: 12px 22px;
+    text-align: center;
+  }
 }
 
 /* --- Burbujas glass violeta para textos sobre fondos oscuros --- */
