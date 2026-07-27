@@ -251,6 +251,12 @@ html {
   text-shadow: 0 6px 22px rgba(0, 0, 0, 0.55);
 }
 
+.band-highlight {
+  /* mismo violeta que la barra de navegación */
+  color: var(--purple);
+  font-weight: 800;
+}
+
 /* --- Burbujas glass violeta para textos sobre fondos oscuros --- */
 
 .band-bubbles {
