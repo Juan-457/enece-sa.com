@@ -518,7 +518,7 @@ const setupGalleryLightbox = () => {
 };
 
 const contactEndpoint =
-  "https://default5243832e5a814f3d9656d9f5b8364a.23.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/b8765be95b7d4726b3282a6870e94886/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=OFwPEdmfkd3Aiu5cWEVwlGbmg56Wnz_hgi3w9Lt0yko";
+  "https://form.umanoai.com.ar/enece";
 
 const setFormStatus = (form, message, isError = false) => {
   let status = form.querySelector(".form-status");
