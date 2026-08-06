@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trabajá con nosotros | ENECE S.A.</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64x64.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512x512.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-180x180.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/version1.css" />
+  <link rel="stylesheet" href="assets/css/scroll.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img src="logoblanco.png" alt="ENECE logo" width="173" height="60" />
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+          <span class="sr-only">Abrir menú</span>
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <nav id="site-navigation">
+          <ul class="nav-menu">
+            <li><a href="index.html#enece"><span>Enece</span></a></li>
+            <li><a href="index.html#empresa"><span>Empresa</span></a></li>
+            <li><a href="index.html#productos"><span>Productos</span></a></li>
+            <li><a href="index.html#ubi"><span>Ubicación</span></a></li>
+            <li><a href="index.html#contacto"><span>Contacto</span></a></li>
+            <li class="active"><a href="#postulacion"><span>Trabajá con nosotros</span></a></li>
+          </ul>
+        </nav>
+        <div class="header-social">
+          <a href="https://www.instagram.com/enece.agro/" aria-label="Instagram" title="Instagram">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path
+                d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.5A3.5 3.5 0 1 1 8.5 12 3.5 3.5 0 0 1 12 8.5zm0 2A1.5 1.5 0 1 0 13.5 12 1.5 1.5 0 0 0 12 10.5zm4.25-3.25a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section story-section" id="trabaja">
+      <div class="container story-content reveal">
+        <a class="story-cta" href="index.html" style="margin-bottom: 20px;">← Volver al sitio</a>
+        <div class="section-title">Sumate a ENECE</div>
+        <h2 class="section-heading">Trabajá con nosotros</h2>
+        <img class="section-separator" src="separador200x46.png" alt="Separador" />
+        <p>
+          Somos una empresa familiar con más de 60 años de experiencia en cultivo y comercialización de papa.
+          Si te interesa formar parte de nuestro equipo, contanos un poco sobre vos y dejanos tu CV: revisamos
+          todas las postulaciones y te contactamos si tu perfil encaja con una búsqueda activa.
+        </p>
+        <a class="story-cta" href="#postulacion">Completar postulación</a>
+      </div>
+    </section>
+
+    <section class="section light" id="postulacion">
+      <div class="container reveal">
+        <h2 class="section-heading">Formulario de postulación</h2>
+        <img class="section-separator" src="separador200x46.png" alt="Separador" />
+        <form
+          class="job-form"
+          data-success-message="¡Gracias! Recibimos tu postulación."
+          data-error-message="No se pudo enviar la postulación. Intentá nuevamente."
+        >
+          <div class="form-grid">
+            <input type="text" name="nombre" placeholder="Nombre y apellido" required />
+            <input type="email" name="mail" placeholder="Mail" required />
+            <input type="text" name="telefono" placeholder="Teléfono" required />
+            <select name="puesto" required>
+              <option value="" disabled selected>Área de interés</option>
+              <option value="Produccion">Producción / Campo</option>
+              <option value="Logistica">Logística y depósito</option>
+              <option value="Administracion">Administración</option>
+              <option value="Comercial">Comercial / Ventas</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <label class="file-field">
+            <span>Adjuntá tu CV (PDF o Word, máx. 5&nbsp;MB)</span>
+            <input type="file" name="cv" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required />
+          </label>
+          <textarea rows="6" name="mensaje" placeholder="Contanos por qué te gustaría sumarte a ENECE (opcional)"></textarea>
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <button type="submit">Enviar postulación</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <img class="footer-enece-logo" src="logoblanco.png" alt="ENECE logo" loading="lazy" decoding="async" />
+          <p>ENECE S.A. · Productores de papa en Argentina.</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html#empresa">Empresa</a>
+          <a href="index.html#productos">Productos</a>
+          <a href="index.html#ubi">Ubicación</a>
+          <a href="https://www.instagram.com/enece.agro/" target="_blank" rel="noreferrer">Instagram</a>
+        </div>
+        <a class="footer-powered-by" href="https://umanoai.com.ar/" target="_blank" rel="noreferrer" aria-label="Desarrollado por UmanoAI">
+          <span>Desarrollado por</span>
+          <img class="footer-umano-logo" src="umanoai.png" alt="UmanoAI logo" width="120" height="120" loading="lazy" decoding="async" />
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -520,6 +520,19 @@ const setupGalleryLightbox = () => {
 const contactEndpoint =
   "https://form.umanoai.com.ar/enece";
 
+const jobFormEndpoint =
+  "https://form.umanoai.com.ar/enece-trabaja";
+
+const MAX_CV_BYTES = 5 * 1024 * 1024;
+
+const fileToBase64 = (file) =>
+  new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result).split(",")[1] || "");
+    reader.onerror = () => reject(reader.error);
+    reader.readAsDataURL(file);
+  });
+
 const setFormStatus = (form, message, isError = false) => {
   let status = form.querySelector(".form-status");
   if (!status) {
@@ -587,6 +600,67 @@ const initContactForms = () => {
   });
 };
 
+const initJobForms = () => {
+  const forms = Array.from(document.querySelectorAll(".job-form"));
+  if (!forms.length) return;
+
+  forms.forEach((form) => {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const successMessage = form.dataset.successMessage || "Postulación enviada.";
+      const errorMessage = form.dataset.errorMessage || "No se pudo enviar.";
+      const cvFile = form.elements.cv?.files?.[0];
+
+      if (cvFile && cvFile.size > MAX_CV_BYTES) {
+        setFormStatus(form, "El CV supera los 5 MB. Subí un archivo más liviano.", true);
+        return;
+      }
+
+      setFormStatus(form, "");
+      setFormDisabled(form, true);
+
+      try {
+        const payload = {
+          nombre: form.elements.nombre?.value?.trim() ?? "",
+          mail: form.elements.mail?.value?.trim() ?? "",
+          telefono: form.elements.telefono?.value?.trim() ?? "",
+          puesto: form.elements.puesto?.value?.trim() ?? "",
+          mensaje: form.elements.mensaje?.value?.trim() ?? "",
+          attachmentBase64: "",
+          attachmentFilename: "",
+          attachmentMime: "",
+        };
+
+        if (cvFile) {
+          payload.attachmentBase64 = await fileToBase64(cvFile);
+          payload.attachmentFilename = cvFile.name;
+          payload.attachmentMime = cvFile.type || "application/octet-stream";
+        }
+
+        const response = await fetch(jobFormEndpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+
+        if (!response.ok) {
+          throw new Error(`Request failed: ${response.status}`);
+        }
+
+        setFormStatus(form, successMessage);
+        form.reset();
+      } catch (error) {
+        setFormStatus(form, errorMessage, true);
+      } finally {
+        setFormDisabled(form, false);
+      }
+    });
+  });
+};
+
 // Parallax
 const hero = document.querySelector(".hero");
 let parallaxFrame;
@@ -615,6 +689,7 @@ setupActiveSectionNav();
 setupBannerTyping();
 setupGalleryLightbox();
 initContactForms();
+initJobForms();
 updateParallax();
 
 window.addEventListener("scroll", onScroll, { passive: true });

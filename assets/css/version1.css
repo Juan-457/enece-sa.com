@@ -71,3 +71,38 @@ button {
 .footer-umano-logo {
   width: 36px;
 }
+
+/* Formulario "Trabajá con nosotros" */
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #d7d7d7;
+  font-family: inherit;
+  font-size: 14px;
+  background: #fff;
+  color: inherit;
+}
+
+.file-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 20px 0;
+  font-size: 13px;
+  color: var(--muted, #6f6f6f);
+  text-align: left;
+}
+
+.file-field input[type="file"] {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.form-status.is-error {
+  color: #b3261e;
+}
