@@ -554,6 +554,19 @@ const setFormDisabled = (form, disabled) => {
   });
 };
 
+const MAX_SUBMITS_PER_SESSION = 4;
+const LIMIT_MESSAGE = "Ya enviaste varios mensajes en esta sesión. Si necesitás contactarnos de nuevo, escribinos por Instagram o esperá unos minutos y recargá la página.";
+
+const submitsRemaining = (storageKey) => {
+  const used = Number(sessionStorage.getItem(storageKey) || "0");
+  return MAX_SUBMITS_PER_SESSION - used;
+};
+
+const registerSubmit = (storageKey) => {
+  const used = Number(sessionStorage.getItem(storageKey) || "0");
+  sessionStorage.setItem(storageKey, String(used + 1));
+};
+
 const initContactForms = () => {
   const forms = Array.from(document.querySelectorAll(".contact-form"));
   if (!forms.length) return;
@@ -561,6 +574,12 @@ const initContactForms = () => {
   forms.forEach((form) => {
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
+
+      if (submitsRemaining("enece_contact_submits") <= 0) {
+        setFormStatus(form, LIMIT_MESSAGE, true);
+        return;
+      }
+      registerSubmit("enece_contact_submits");
 
       const payload = {
         nombre: form.elements.nombre?.value?.trim() ?? "",
@@ -612,11 +631,17 @@ const initJobForms = () => {
       const errorMessage = form.dataset.errorMessage || "No se pudo enviar.";
       const cvFile = form.elements.cv?.files?.[0];
 
+      if (submitsRemaining("enece_job_submits") <= 0) {
+        setFormStatus(form, LIMIT_MESSAGE, true);
+        return;
+      }
+
       if (cvFile && cvFile.size > MAX_CV_BYTES) {
         setFormStatus(form, "El CV supera los 5 MB. Subí un archivo más liviano.", true);
         return;
       }
 
+      registerSubmit("enece_job_submits");
       setFormStatus(form, "");
       setFormDisabled(form, true);
 
