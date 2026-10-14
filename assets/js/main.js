@@ -525,6 +525,9 @@ const jobFormEndpoint =
 
 const MAX_CV_BYTES = 5 * 1024 * 1024;
 
+// Marca de carga de la página: el proxy descarta envíos sin ella o demasiado rápidos (anti-bots).
+const pageLoadedAt = Date.now();
+
 const fileToBase64 = (file) =>
   new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -587,6 +590,7 @@ const initContactForms = () => {
         telefono: form.elements.telefono?.value?.trim() ?? "",
         Asunto: form.elements.Asunto?.value?.trim() ?? "",
         Mensaje: form.elements.Mensaje?.value?.trim() ?? "",
+        _t: pageLoadedAt,
       };
 
       const successMessage = form.dataset.successMessage || "Mensaje enviado.";
@@ -655,6 +659,7 @@ const initJobForms = () => {
           attachmentBase64: "",
           attachmentFilename: "",
           attachmentMime: "",
+          _t: pageLoadedAt,
         };
 
         if (cvFile) {
